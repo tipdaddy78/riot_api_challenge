@@ -32,6 +32,8 @@ def main(region, patch, queue):
             with open(filepath + "_results.json", 'a') as f:
                 json.dump(data, f)
                 f.write(",\n\t\t")
+
+            participant = 0
         with open(filepath + "_results.json", 'a') as f:
                 f.write("]}")
         
