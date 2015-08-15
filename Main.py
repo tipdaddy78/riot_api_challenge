@@ -14,7 +14,7 @@ def main(region, patch, queue):
         response = api.get_match_by_matchID (match)
         participants = response["participants"]
         with open(filepath + "_results.json", 'a') as f:
-            f.write("'matchId' : '" + str(match) + "' \n\t"
+            f.write("'matchId' : '" + str(match) + "', \n\t"
                 +   "participants : [\n\t\t")
         for participant in participants:
             data = {"item0" : participant["stats"]["item0"],
@@ -40,4 +40,4 @@ def main(region, patch, queue):
 
     
 if __name__ == "__main__":
-    main('Korea', '5.11', 'NORMAL_5X5')
+    main('Brazil', '5.11', 'NORMAL_5X5')
