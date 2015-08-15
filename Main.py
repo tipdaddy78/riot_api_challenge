@@ -8,35 +8,34 @@ def main(region, patch, queue):
     with open(filepath + '.json') as data:
         matches = json.load(data)
     api = RiotAPI('7abd16db-0076-4373-8cba-eac76f0de522', Consts.REGIONS[region])
-    results=[]
-    response = api.get_match_by_matchID (matches[0])
-    participants = response["participants"]
-    data = {}
-    
-    for participant in participants:
-        item0 = participant["stats"]["item0"]
-        item1 = participant["stats"]["item1"]
-        item2 = participant["stats"]["item2"]
-        item3 = participant["stats"]["item3"]
-        item4 = participant["stats"]["item4"]
-        item5 = participant["stats"]["item5"]
-        item6 = participant["stats"]["item6"]
-        championId = participant["championId"]
-        winner = participant["stats"]["winner"]
-        lane = participant["timeline"]["lane"]
-        role = participant['timeline']['role']
+    with open(filepath + "_results.json", 'a') as f:
+            f.write("{\n'matches' :[{\n\t")
+    for match in matches:
+        response = api.get_match_by_matchID (match)
+        participants = response["participants"]
+        with open(filepath + "_results.json", 'a') as f:
+            f.write("'matchId' : '" + str(match) + "' \n\t"
+                +   "participants : [\n\t\t")
+        for participant in participants:
+            data = {"item0" : participant["stats"]["item0"],
+                    "item1" : participant["stats"]["item1"],
+                    "item2" : participant["stats"]["item2"],
+                    "item3" : participant["stats"]["item3"],
+                    "item4" : participant["stats"]["item4"],
+                    "item5" : participant["stats"]["item5"],
+                    "item6" : participant["stats"]["item6"],
+                    "championId" : participant["championId"],
+                    "winner" : participant["stats"]["winner"],
+                    "lane" : participant["timeline"]["lane"],
+                    "role" : participant['timeline']['role']}
 
-        data.update({"item0" : item0 , "item1" : item1})
-
-        with open(filepath + "_results.json", 'w') as f:
-            json.dump(data, f)
+            with open(filepath + "_results.json", 'a') as f:
+                json.dump(data, f)
+                f.write(",\n\t\t")
+        with open(filepath + "_results.json", 'a') as f:
+                f.write("]}")
         
-##
-##        current.update({"item0" : item0 , "item1" : item1})
-##
-##        with open (filepath + "_results.json", "w") as f:
-##            json.dump(current, f)
 
     
 if __name__ == "__main__":
-    main('Turkey', '5.11', 'NORMAL_5X5')
+    main('Korea', '5.11', 'NORMAL_5X5')
