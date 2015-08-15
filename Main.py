@@ -7,7 +7,7 @@ def main(region, patch, queue):
     filepath = '../AP_ITEM_DATASET/' + patch + '/' + queue + '/' + Consts.REGIONS[region]
     with open(filepath + '.json') as data:
         matches = json.load(data)
-    api = RiotAPI('7abd16db-0076-4373-8cba-eac76f0de522', Consts.REGIONS[region])
+    api = RiotAPI(Consts.api_key, Consts.REGIONS[region])
     with open(filepath + "_results.json", 'a') as f:
             f.write("{\n'matches' :[{\n\t")
     for match in matches:
