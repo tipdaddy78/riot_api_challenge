@@ -23,7 +23,11 @@ class RiotAPI(object):
             params=args
             )
         print response.url
-        return response.json()
+        if (response.status_code == 200):
+            return response.json()
+        else:
+            print "Failed to connect"
+            return "Bad JSON"
 
     def get_match_by_matchID(self, matchId):
         api_url = Consts.URL['match_by_matchID'].format(
