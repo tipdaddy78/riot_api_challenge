@@ -10,14 +10,16 @@ import json
 
 def main(patch, region, queue, items=Consts.ITEMS, lanes=Consts.LANES, champions=Consts.CHAMPIONS):
     # Initialize variables
-    file_path = '../AP_ITEM_DATASET/' + patch + '/' + queue + '/' + Consts.REGIONS[region] + '_results.json'
+    file_path = '../AP_ITEM_DATASET/' + patch + '/' + queue + '/'
 
-    with open(file_path) as f:
+    with open(file_path  + Consts.REGIONS[region] + '_results.json') as f:
         data = json.load(f)
     matches = data['matches']
 
     for item, item_code in items.iteritems():
-        results_file = '../' + item + '_analysis.txt'
+        results_file = file_path + 'item_data/' + Consts.REGIONS[region] + '_' + item + '_analysis.txt'
+        with open(results_file, 'a+') as f:
+            f.write('{\n\t "stats": [\n\t\t')
         for champion, champion_code in champions.iteritems():
             for lane in lanes:
                 pick_count = 0.0
@@ -75,14 +77,39 @@ def main(patch, region, queue, items=Consts.ITEMS, lanes=Consts.LANES, champions
                     pick_rate = pick_count / total_players
                     win_rate = win_count / pick_count
 
+                item_dictionary = {
+                    'champion': champion,
+                    'lane': lane,
+                    'total_matches': total_matches,
+                    'total_players': total_players,
+                    'pick_rate': pick_rate,
+                    'win_rate': win_rate
+                }
                 with open(results_file, 'a+') as f:
-                    f.write('##### Patch: ' + patch + ' Region: ' + region + ' Queue: ' + queue + ' #####\n')
-                    f.write('##### Champion: ' + champion + ' Lane: ' + lane + ' #####\n')
-                    f.write('## In ' + str(int(total_matches)) + ' Games Across ' + str(
-                        int(total_players)) + ' Players...\n')
-                    f.write('## Pick Rate: ' + str(pick_rate) + '\n')
-                    f.write('## Win Rate: ' + str(win_rate) + '\n\n')
-
-
+                    json.dump(item_dictionary, f)
+                    f.write(',\n\t\t')
+        with open(results_file, 'a+') as f:
+            f.write(']}')
 if __name__ == "__main__":
-    main('5.11', 'North America', 'RANKED_SOLO')
+    main('5.14', 'Brazil', 'RANKED_SOLO')
+    main('5.14', 'EU Nordic & East', 'RANKED_SOLO')
+    main('5.14', 'EU West', 'RANKED_SOLO')
+    main('5.14', 'Korea', 'RANKED_SOLO')
+    main('5.14', 'Latin America North', 'RANKED_SOLO')
+    main('5.14', 'Latin America South', 'RANKED_SOLO')
+    main('5.14', 'North America', 'RANKED_SOLO')
+    main('5.14', 'Oceania', 'RANKED_SOLO')
+    main('5.14', 'Russia', 'RANKED_SOLO')
+    main('5.14', 'Turkey', 'RANKED_SOLO')
+
+    main('5.14', 'Brazil', 'NORMAL_5X5')
+    main('5.14', 'EU Nordic & East', 'NORMAL_5X5')
+    main('5.14', 'EU West', 'NORMAL_5X5')
+    main('5.14', 'Korea', 'NORMAL_5X5')
+    main('5.14', 'Latin America North', 'NORMAL_5X5')
+    main('5.14', 'Latin America South', 'NORMAL_5X5')
+    main('5.14', 'North America', 'NORMAL_5X5')
+    main('5.14', 'Oceania', 'NORMAL_5X5')
+    main('5.14', 'Russia', 'NORMAL_5X5')
+    main('5.14', 'Turkey', 'NORMAL_5X5')
+
