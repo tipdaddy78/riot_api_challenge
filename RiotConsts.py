@@ -9,6 +9,10 @@ API_VERSIONS = {
     'match': '2.2'
 }
 
+QUEUES = dict(normal='NORMAL_5X5', ranked='RANKED_SOLO')
+
+PATCHES = dict(first= '5.11', second='5.14')
+
 REGIONS = {
     'Brazil': 'br',
     'EU Nordic & East': 'eune',
@@ -45,9 +49,10 @@ ITEMS = {
     'Zhonyas Hourglass': 3157
 }
 
-LANES = [u'TOP', u'JUNGLE', u'MIDDLE', u'BOTTOM']
+LANES = [u'TOP', u'JUNGLE', u'MIDDLE', u'BOTTOM', u'']
 
 CHAMPIONS = {
+    '': 0,
     'Aatrox': 266,
     'Ahri': 103,
     'Akali': 84,
@@ -57,7 +62,7 @@ CHAMPIONS = {
     'Annie': 1,
     'Ashe': 22,
     'Azir': 268,
-    'Bard': 123, #FIGURE OUT
+    'Bard': 432,
     'Blitzcrank': 53,
     'Brand': 63,
     'Braum': 201,
@@ -69,7 +74,7 @@ CHAMPIONS = {
     'Diana': 131,
     'Draven': 119,
     'Dr. Mundo': 36,
-    'Ekko': 123, #FIGURE OUT
+    'Ekko': 245,
     'Elise': 60,
     'Evelynn': 28,
     'Ezreal': 81,
@@ -143,8 +148,8 @@ CHAMPIONS = {
     'Soraka': 16,
     'Swain': 50,
     'Syndra': 134,
-    'Tahm Kench': 123, #FIGURE OUT
-    'Talon': 44,
+    'Tahm Kench': 223,
+    'Talon': 91,
     'Taric': 44,
     'Teemo': 17,
     'Thresh': 412,
