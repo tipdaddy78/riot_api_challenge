@@ -8,16 +8,21 @@
 
 #canvas {
 	float: left;
+  background-color: white;
 }
 #canvas2 {
 	float: right;
+  background-color: white;
 }
 
 #canvas3 {
   float: left;
+  background-color: white;
 }
-#canvas2 {
+
+#canvas4 {
   float: right;
+  background-color: white;
 }
 
 #canvasDiv {
@@ -98,4 +103,11 @@ hr {
 tr > th {
 	font-weight: normal;
 	font-size: 12px
+}
+
+.chart-legend li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
 }
