@@ -129,7 +129,6 @@ window.onload = function(){
     document.getElementById('js-legend').innerHTML = myBar.generateLegend();
     document.getElementById('js-legend2').innerHTML = myBar.generateLegend();
     
-    for (i = 0; i < items.length; i++){
-        console.log(items.patches[0].queues[0].regions[0].items[0].stats[0]);
-    }
+    console.log(jsonData.patches[0].queues[0].regions[0].items[0].stats[0]);
+    
 }
