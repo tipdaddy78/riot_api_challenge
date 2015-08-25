@@ -20,6 +20,20 @@
   float: right;
 }
 
+#canvasDiv {
+  float: left;
+}
+#canvasDiv2 {
+  float: right;
+}
+
+#canvasDiv3 {
+  float: left;
+}
+#canvasDiv2 {
+  float: right;
+}
+
 
 .container{
 	width:95%;
