@@ -17,6 +17,8 @@ request.onerror = function() {
 
 request.send();
 
+alert(data.regions)
+
 
 
 var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
