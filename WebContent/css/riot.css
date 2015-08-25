@@ -111,3 +111,7 @@ tr > th {
     height: 12px;
     margin-right: 5px;
 }
+.chart-legend {
+  background-color: white;
+  color: black;
+}
