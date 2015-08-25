@@ -130,9 +130,6 @@ window.onload = function(){
     document.getElementById('js-legend2').innerHTML = myBar.generateLegend();
     
     for (i = 0; i < items.length; i++){
-        var queues = items[0]["queues"];
-        var regions = queues[0]["regions"];
-        var NA = regions[1];
-        console.log(NA["stats"])
+        console.log(items.patches[0].queues[0].regions[0].items[0].stats[0]);
     }
 }
