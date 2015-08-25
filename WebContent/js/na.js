@@ -1,21 +1,9 @@
-var jsonData = $.getJSON("../../item_analysis.json", function(){
+var jsonData = $.getJSON("../../item_analysis.json", function(jsonData){
     console.log("success");
-})
-    .done(function(){
-        console.log("second success");
-    })
-    .fail(function() {
-        console.log("error");
-    })
-    .always(function() {
-        console.log("complete");
-    });
-
-jsonData.complete(function(){
-    console.log("second complete");
-console.log(jsonData.patches.queues[0].regions[0].items[0].stats[0]);
-
+    console.log(jsonData.patches.queues[0].regions[0].items[0].stats[0]);
 });
+
+
 
 var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
 "Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
