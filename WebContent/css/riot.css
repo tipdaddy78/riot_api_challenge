@@ -8,21 +8,21 @@
 
 #canvas {
 	float: left;
-  background-color: white;
+  background-color: rgba(255,255,255,0.6);
 }
 #canvas2 {
 	float: right;
-  background-color: white;
+  background-color: rgba(255,255,255,0.6);
 }
 
 #canvas3 {
   float: left;
-  background-color: white;
+  background-color: rgba(255,255,255,0.6);
 }
 
 #canvas4 {
   float: right;
-  background-color: white;
+  background-color: rgba(255,255,255,0.6);
 }
 
 #canvasDiv {
@@ -112,6 +112,5 @@ tr > th {
     margin-right: 5px;
 }
 .chart-legend {
-  background-color: white;
-  color: black;
+  color: white;
 }

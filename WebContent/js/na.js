@@ -27,18 +27,18 @@ var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unhol
     datasets: [
         {
             label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            fillColor: "rgba(45,180,174,0.5)",
+            strokeColor: "rgba(45,180,174,0.8)",
+            highlightFill: "rgba(45,180,174,0.75)",
+            highlightStroke: "rgba(45,180,174,1)",
             data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
         },
         {
             label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
+            fillColor: "rgba(1, 159, 196,0.5)",
+            strokeColor: "rgba(1, 159, 196,0.8)",
+            highlightFill: "rgba(1, 159, 196,0.75)",
+            highlightStroke: "rgba(1, 159, 196,1)",
             data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
         }
     ]
@@ -51,18 +51,18 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
     datasets: [
         {
             label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            fillColor: "rgba(45,180,174,0.5)",
+            strokeColor: "rgba(45,180,174,0.8)",
+            highlightFill: "rgba(45,180,174,0.75)",
+            highlightStroke: "rgba(45,180,174,1)",
             data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
         },
         {
             label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
+            fillColor: "rgba(1, 159, 196,0.5)",
+            strokeColor: "rgba(1, 159, 196,0.8)",
+            highlightFill: "rgba(1, 159, 196,0.75)",
+            highlightStroke: "rgba(1, 159, 196,1)",
             data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
@@ -75,18 +75,18 @@ var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unh
     datasets: [
         {
             label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            fillColor: "rgba(45,180,174,0.5)",
+            strokeColor: "rgba(45,180,174,0.8)",
+            highlightFill: "rgba(45,180,174,0.75)",
+            highlightStroke: "rgba(45,180,174,1)",
             data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
         },
         {
             label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
+            fillColor: "rgba(1, 159, 196,0.5)",
+            strokeColor: "rgba(1, 159, 196,0.8)",
+            highlightFill: "rgba(1, 159, 196,0.75)",
+            highlightStroke: "rgba(1, 159, 196,1)",
             data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
         }
     ]
@@ -99,18 +99,18 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
     datasets: [
         {
             label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            fillColor: "rgba(45,180,174,0.5)",
+            strokeColor: "rgba(45,180,174,0.8)",
+            highlightFill: "rgba(45,180,174,0.75)",
+            highlightStroke: "rgba(45,180,174,1)",
             data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
         },
         {
             label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
+            fillColor: "rgba(1, 159, 196,0.5)",
+            strokeColor: "rgba(1, 159, 196,0.8)",
+            highlightFill: "rgba(1, 159, 196,0.75)",
+            highlightStroke: "rgba(1, 159, 196,1)",
             data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
