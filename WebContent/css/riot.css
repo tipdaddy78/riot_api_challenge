@@ -22,28 +22,29 @@
 
 #canvasDiv {
   float: left;
+  padding-left:0px;
 }
 #canvasDiv2 {
   float: right;
+  padding-right:0px;
 }
 
 #canvasDiv3 {
   float: left;
+  padding-left:0px;
 }
-#canvasDiv2 {
+#canvasDiv4 {
   float: right;
+  padding-left:0px;
 }
 
 
 .container{
-	width:95%;
+	width:98%;
 	margin-left: auto;	
 	margin-right: auto;
 	background: rgba(0,0,0, 0.67);
 	text-align: center;
-}
-.row{
-  margin:0;
 }
 .btn-pbnb{
   margin-bottom:5px;	
@@ -74,9 +75,13 @@ td {
     padding-left: 0;
   }
 }
- h4 {
-  margin-top: 25px;
+ h2 {
+  color: #fff;
 }
+h1 {
+  color: #fff;
+}
+
 .row {
   margin-bottom: 5px;
 }

@@ -20,8 +20,6 @@ var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Bla
 "Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
  "Will of the Ancients", "Zhonyas Hourglass"];
 
-
-
 var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
 "Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
 "Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
@@ -57,7 +55,7 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
+            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
         },
         {
             label: "5.14",
@@ -65,7 +63,7 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
             highlightStroke: "rgba(151,187,205,1)",
-            data: [45.54, 52.25, 49.67, 46.35, 86, 27, 90]
+            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
 };
@@ -105,7 +103,7 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40]
+            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
         },
         {
             label: "5.14",
@@ -113,7 +111,7 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
             highlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90, 65, 59, 80, 81, 56, 55, 40]
+            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
 };
@@ -121,14 +119,14 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
 window.onload = function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(rankedPick, {responsive : true});
-	var ctx2 = document.getElementById("canvas2").getContext("2d");
-		window.myBar2 = new Chart(ctx2).Bar(rankedWin, {responsive : true});
+	var ctx5 = document.getElementById("canvas2").getContext("2d");
+        window.myBar5 = new Chart(ctx5).Bar(rankedWin, {responsive : true});
     var ctx3 = document.getElementById("canvas3").getContext("2d");
         window.myBar3 = new Chart(ctx3).Bar(normalPick, {responsive: true});
 	var ctx4 = document.getElementById("canvas4").getContext("2d");
 		window.myBar4 = new Chart(ctx4).Bar(normalWin, {responsive : true});
 
     for (i = 0; i < items.length; i++){
-        console.log(items["patches"]["queues"]["regions"]["North America"][i]["stats"]);
+        console.log(items["patches"][0]["queues"]["regions"]["North America"][i]["stats"]);
     }
 }
