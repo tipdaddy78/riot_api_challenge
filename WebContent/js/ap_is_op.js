@@ -127,6 +127,9 @@ window.onload = function(){
 		window.myBar4 = new Chart(ctx4).Bar(normalWin, {responsive : true});
 
     for (i = 0; i < items.length; i++){
-        console.log(items[0]["queues"][0]["regions"]["North America"][i]["stats"]);
+        var queues = items[0]["queues"];
+        var regions = queues[0]["regions"]
+        var NA = regions[1];
+        console.log(NA["stats"])
     }
 }
