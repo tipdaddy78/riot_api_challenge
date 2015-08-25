@@ -35,10 +35,10 @@ var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unhol
         },
         {
             label: "5.14",
-            fillColor: "rgba(1, 159, 196,0.5)",
-            strokeColor: "rgba(1, 159, 196,0.8)",
-            highlightFill: "rgba(1, 159, 196,0.75)",
-            highlightStroke: "rgba(1, 159, 196,1)",
+            fillColor: "rgba(241,215,120,0.5)",
+            strokeColor: "rgba(241,215,120,0.8)",
+            highlightFill: "rgba(241,215,120,0.75)",
+            highlightStroke: "rgba(241,215,120,1)",
             data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
         }
     ]
@@ -59,10 +59,10 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
         },
         {
             label: "5.14",
-            fillColor: "rgba(1, 159, 196,0.5)",
-            strokeColor: "rgba(1, 159, 196,0.8)",
-            highlightFill: "rgba(1, 159, 196,0.75)",
-            highlightStroke: "rgba(1, 159, 196,1)",
+            fillColor: "rgba(241,215,120,0.5)",
+            strokeColor: "rgba(241,215,120,0.8)",
+            highlightFill: "rgba(241,215,120,0.75)",
+            highlightStroke: "rgba(241,215,120,1)",
             data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
@@ -83,10 +83,10 @@ var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unh
         },
         {
             label: "5.14",
-            fillColor: "rgba(1, 159, 196,0.5)",
-            strokeColor: "rgba(1, 159, 196,0.8)",
-            highlightFill: "rgba(1, 159, 196,0.75)",
-            highlightStroke: "rgba(1, 159, 196,1)",
+            fillColor: "rgba(241,215,120,0.5)",
+            strokeColor: "rgba(241,215,120,0.8)",
+            highlightFill: "rgba(241,215,120,0.75)",
+            highlightStroke: "rgba(241,215,120,1)",
             data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
         }
     ]
@@ -107,10 +107,10 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
         },
         {
             label: "5.14",
-            fillColor: "rgba(1, 159, 196,0.5)",
-            strokeColor: "rgba(1, 159, 196,0.8)",
-            highlightFill: "rgba(1, 159, 196,0.75)",
-            highlightStroke: "rgba(1, 159, 196,1)",
+            fillColor: "rgba(241,215,120,0.5)",
+            strokeColor: "rgba(241,215,120,0.8)",
+            highlightFill: "rgba(241,215,120,0.75)",
+            highlightStroke: "rgba(241,215,120,1)",
             data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
         }
     ]
