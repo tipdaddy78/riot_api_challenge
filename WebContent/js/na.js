@@ -13,7 +13,7 @@ var jsonData = $.getJSON("../../item_analysis.json", function(){
 
 jsonData.complete(function(){
     console.log("second complete");
-console.log(jsonData.patches[0].queues[0].regions[0].items[0].stats[0]);
+console.log(jsonData.patches.queues[0].regions[0].items[0].stats[0]);
 
 });
 
