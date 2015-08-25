@@ -1,6 +1,6 @@
 var jsonData = $.getJSON("../../item_analysis.json", function(jsonData){
     console.log("success");
-    console.log(jsonData.patches.queues[0].regions[0].items[0].stats[0]);
+    console.log(jsonData.patches.queues.regions[0].items[0].stats[0]);
 });
 
 
