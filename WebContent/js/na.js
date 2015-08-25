@@ -13,6 +13,8 @@ var jsonData = $.getJSON("../../item_analysis.json", function(){
 
 jsonData.complete(function(){
     console.log("second complete");
+console.log(jsonData.patches[0].queues[0].regions[0].items[0].stats[0]);
+
 });
 
 var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
@@ -127,8 +129,5 @@ window.onload = function(){
 		window.myBar4 = new Chart(ctx4).Bar(normalWin, options);
     
     document.getElementById('js-legend').innerHTML = myBar.generateLegend();
-    document.getElementById('js-legend2').innerHTML = myBar.generateLegend();
-    
-    console.log(jsonData.patches[0].queues[0].regions[0].items[0].stats[0]);
-    
+    document.getElementById('js-legend2').innerHTML = myBar.generateLegend();   
 }
