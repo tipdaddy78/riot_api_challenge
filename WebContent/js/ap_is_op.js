@@ -94,7 +94,7 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
     ]
 };
 
-var jsonData = $.getJSON("../../../item_data/item_analysis.json", function(){
+var jsonData = $.getJSON("../../item_analysis.json", function(){
     console.log("success");
 })
     .done(function(){
