@@ -118,13 +118,13 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
 
 window.onload = function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx).Bar(rankedPick, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true}));
+		window.myBar = new Chart(ctx).Bar(rankedPick, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true});
 	var ctx5 = document.getElementById("canvas2").getContext("2d");
-        window.myBar5 = new Chart(ctx5).Bar(rankedWin, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true}));
+        window.myBar5 = new Chart(ctx5).Bar(rankedWin, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true});
     var ctx3 = document.getElementById("canvas3").getContext("2d");
         window.myBar3 = new Chart(ctx3).Bar(normalPick, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true});
 	var ctx4 = document.getElementById("canvas4").getContext("2d");
-		window.myBar4 = new Chart(ctx4).Bar(normalWin, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true}));
+		window.myBar4 = new Chart(ctx4).Bar(normalWin, {scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true});
     
     document.getElementById('js-legend').innerHTML = myChart.generateLegend();
     
