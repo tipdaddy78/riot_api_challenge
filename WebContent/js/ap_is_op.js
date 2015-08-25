@@ -1,7 +1,31 @@
-var rankedPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
+var jsonData = $.getJSON("../../item_analysis.json", function(){
+    console.log("success");
+})
+    .done(function(){
+        console.log("second success");
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+
+jsonData.complete(function(){
+    console.log("second complete");
+});
+
+var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
+"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
+"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
+ "Will of the Ancients", "Zhonyas Hourglass"];
+
+
+
+var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
+"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
+"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
+ "Will of the Ancients", "Zhonyas Hourglass"],
     datasets: [
         {
             label: "5.11",
@@ -94,24 +118,6 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
     ]
 };
 
-var jsonData = $.getJSON("../../item_analysis.json", function(){
-    console.log("success");
-})
-    .done(function(){
-        console.log("second success");
-    })
-    .fail(function() {
-        console.log("error");
-    })
-    .always(function() {
-        console.log("complete");
-    });
-
-jsonData.complete(function(){
-    console.log("second complete");
-});
-
-
 window.onload = function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(rankedPick, {responsive : true});
@@ -121,4 +127,8 @@ window.onload = function(){
         window.myBar3 = new Chart(ctx3).Bar(normalPick, {responsive: true});
 	var ctx4 = document.getElementById("canvas4").getContext("2d");
 		window.myBar4 = new Chart(ctx4).Bar(normalWin, {responsive : true});
+
+    for (i = 0; i < items.length; i++){
+        console.log(items["patches"]["queues"]["regions"]["North America"][i]["stats"]);
+    }
 }
