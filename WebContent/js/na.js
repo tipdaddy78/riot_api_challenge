@@ -1,3 +1,4 @@
+/*Initializing graph arrays*/
 var rankedPickData511 = [];
 var rankedPickData514 = [];
 var rankedWinData511 = [];
@@ -11,6 +12,7 @@ var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Bla
 "Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
  "Will of the Ancients", "Zhonyas Hourglass"];
 
+/*Load JSON file and fill arrays with data*/
 request = new XMLHttpRequest();
 request.open('GET', '../item_analysis.json', true);
 
@@ -28,8 +30,6 @@ request.onload = function() {
         normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
         normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
     }
-    alert(rankedPickData514);
-
   } else {
     // We reached our target server, but it returned an error
 
@@ -47,7 +47,7 @@ request.send();
 
 
 
-
+/* Setup Tables */
 var rankedPick = {labels: items,
     datasets: [
         {
@@ -131,6 +131,8 @@ var normalWin = {labels: items,
         }
     ]
 };
+
+/* Create Tables and insert them into html */
 var options = {scaleFontColor: "#fff",scaleLineColor : "#fff",scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true};
 window.onload = function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
