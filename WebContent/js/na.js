@@ -30,7 +30,6 @@ request.onload = function() {
         normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
         normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
     }
-    alert(rankedPickData511);
   } else {
     // We reached our target server, but it returned an error
 
