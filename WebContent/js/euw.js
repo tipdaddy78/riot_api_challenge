@@ -1,135 +1,155 @@
-var jsonData = $.getJSON("../../item_analysis.json", function(){
-    console.log("success");
-})
-    .done(function(){
-        console.log("second success");
-    })
-    .fail(function() {
-        console.log("error");
-    })
-    .always(function() {
-        console.log("complete");
-    });
-
-jsonData.complete(function(){
-    console.log("second complete");
-});
-
-var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
-"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
-"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonyas Hourglass"];
-
-var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
-"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
-"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonyas Hourglass"],
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
-        }
-    ]
-};
-
-var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
-        }
-    ]
-};
-
-var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
-        }
-    ]
-};
-
-var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(151,187,205,0.5)",
-            strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
-            highlightStroke: "rgba(151,187,205,1)",
-            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
-        }
-    ]
-};
-
 window.onload = function(){
-	var ctx = document.getElementById("canvas").getContext("2d");
-		window.myBar = new Chart(ctx).Bar(rankedPick, {responsive : true});
-	var ctx5 = document.getElementById("canvas2").getContext("2d");
-        window.myBar5 = new Chart(ctx5).Bar(rankedWin, {responsive : true});
-    var ctx3 = document.getElementById("canvas3").getContext("2d");
-        window.myBar3 = new Chart(ctx3).Bar(normalPick, {responsive: true});
-	var ctx4 = document.getElementById("canvas4").getContext("2d");
-		window.myBar4 = new Chart(ctx4).Bar(normalWin, {responsive : true});
+    /*Initializing Variables*/
+    var rankedPickData511 = [];
+    var rankedPickData514 = [];
+    var rankedWinData511 = [];
+    var rankedWinData514 = [];
+    var normalPickData511 = [];
+    var normalPickData514 = [];
+    var normalWinData511 = [];
+    var normalWinData514 = [];
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive",
+    "Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
+    "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
+     "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
+     var options = {scaleFontColor: "#fff",
+                    scaleLineColor : "#fff",
+                    scaleShowHorizontalLines: false, 
+                    scaleShowVerticalLines: false, 
+                    responsive: true};
 
-    for (i = 0; i < items.length; i++){
-        var queues = items[0]["queues"];
-        var regions = queues[0]["regions"];
-        var NA = regions[1];
-        console.log(NA["stats"])
-    }
+
+    /*Load JSON file and fill arrays with data*/
+    request = new XMLHttpRequest();
+    request.open('GET', '../item_analysis.json', true);
+
+    request.onload = function() {
+        console.log("request.onload")
+      if (request.status >= 200 && request.status < 400){
+        // Success!
+        data = JSON.parse(request.responseText);
+        for(i = 0; i < items.length; i++) {
+            console.log("Getting data for item" + i);
+            rankedPickData511[i] = ((data.patches[1].queues[0].regions[7].items[i].stats[4].pick_rate)*100).toFixed(2);
+            rankedPickData514[i] = ((data.patches[0].queues[0].regions[7].items[i].stats[4].pick_rate)*100).toFixed(2);
+            rankedWinData511[i] = ((data.patches[1].queues[0].regions[7].items[i].stats[4].win_rate)*100).toFixed(2);
+            rankedWinData514[i] = ((data.patches[0].queues[0].regions[7].items[i].stats[4].win_rate)*100).toFixed(2);
+            normalPickData511[i] = ((data.patches[1].queues[1].regions[7].items[i].stats[4].pick_rate)*100).toFixed(2);
+            normalPickData514[i] = ((data.patches[0].queues[1].regions[7].items[i].stats[4].pick_rate)*100).toFixed(2);
+            normalWinData511[i] = ((data.patches[1].queues[1].regions[7].items[i].stats[4].win_rate)*100).toFixed(2);
+            normalWinData514[i] = ((data.patches[0].queues[1].regions[7].items[i].stats[4].win_rate)*100).toFixed(2);
+        }
+
+        var rankedPick = {labels: items,
+            datasets: [
+                {
+                    label: "5.11",
+                    fillColor: "rgba(45,180,174,0.5)",
+                    strokeColor: "rgba(45,180,174,0.8)",
+                    highlightFill: "rgba(45,180,174,0.75)",
+                    highlightStroke: "rgba(45,180,174,1)",
+                    data: rankedPickData511
+                },
+                {
+                    label: "5.14",
+                    fillColor: "rgba(241,215,120,0.5)",
+                    strokeColor: "rgba(241,215,120,1)",
+                    highlightFill: "rgba(241,215,120,0.75)",
+                    highlightStroke: "rgba(241,215,120,1)",
+                    data: rankedPickData514
+                }
+            ]
+        };
+
+        var rankedWin = {labels: items,
+            datasets: [
+                {
+                    label: "5.11",
+                    fillColor: "rgba(45,180,174,0.5)",
+                    strokeColor: "rgba(45,180,174,0.8)",
+                    highlightFill: "rgba(45,180,174,0.75)",
+                    highlightStroke: "rgba(45,180,174,1)",
+                    data: rankedWinData511
+                },
+                {
+                    label: "5.14",
+                    fillColor: "rgba(241,215,120,0.5)",
+                    strokeColor: "rgba(241,215,120,1)",
+                    highlightFill: "rgba(241,215,120,0.75)",
+                    highlightStroke: "rgba(241,215,120,1)",
+                    data: rankedWinData514
+                }
+            ]
+        };
+
+        var normalPick = {labels: items,
+            datasets: [
+                {
+                    label: "5.11",
+                    fillColor: "rgba(45,180,174,0.5)",
+                    strokeColor: "rgba(45,180,174,0.8)",
+                    highlightFill: "rgba(45,180,174,0.75)",
+                    highlightStroke: "rgba(45,180,174,1)",
+                    data: normalPickData511
+                },
+                {
+                    label: "5.14",
+                    fillColor: "rgba(241,215,120,0.5)",
+                    strokeColor: "rgba(241,215,120,1)",
+                    highlightFill: "rgba(241,215,120,0.75)",
+                    highlightStroke: "rgba(241,215,120,1)",
+                    data: normalPickData514
+                }
+            ]
+        };
+
+        var normalWin = {labels: items,
+            datasets: [
+                {
+                    label: "5.11",
+                    fillColor: "rgba(45,180,174,0.5)",
+                    strokeColor: "rgba(45,180,174,0.8)",
+                    highlightFill: "rgba(45,180,174,0.75)",
+                    highlightStroke: "rgba(45,180,174,1)",
+                    data: normalWinData511
+                },
+                {
+                    label: "5.14",
+                    fillColor: "rgba(241,215,120,0.5)",
+                    strokeColor: "rgba(241,215,120,1)",
+                    highlightFill: "rgba(241,215,120,0.75)",
+                    highlightStroke: "rgba(241,215,120,1)",
+                    data: normalWinData514
+                }
+            ]
+        };
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx).Bar(rankedPick, options);
+            console.log("tried to make graph1");
+        var ctx2 = document.getElementById("canvas2").getContext("2d");
+            window.myBar2 = new Chart(ctx2).Bar(rankedWin, options);
+            console.log("tried to make graph2");
+        var ctx3 = document.getElementById("canvas3").getContext("2d");
+            window.myBar3 = new Chart(ctx3).Bar(normalPick, options);
+            console.log("tried to make graph3");
+        var ctx4 = document.getElementById("canvas4").getContext("2d");
+            window.myBar4 = new Chart(ctx4).Bar(normalWin, options);
+            console.log("tried to make graph4");
+        
+        document.getElementById('js-legend').innerHTML = myBar.generateLegend();
+        document.getElementById('js-legend2').innerHTML = myBar.generateLegend(); 
+      } else {
+        // We reached our target server, but it returned an error
+        alert("Failed to parse JSON. Please try again.");
+
+      }
+    };
+
+    request.onerror = function() {
+      // There was a connection error of some sort
+      alert("Failed to reach server. Please try again.");
+    };
+
+    request.send(); 
 }
