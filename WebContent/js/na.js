@@ -7,10 +7,10 @@ var normalPickData511 = [];
 var normalPickData514 = [];
 var normalWinData511 = [];
 var normalWinData514 = [];
-var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
-"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
-"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonyas Hourglass"];
+var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive",
+"Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
+"Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
+ "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
 
 /*Load JSON file and fill arrays with data*/
 request = new XMLHttpRequest();
@@ -131,6 +131,8 @@ var normalWin = {labels: items,
         }
     ]
 };
+
+alert(data.patches[1].queues[0].regions[1].items[0].stats[4].pick_rate)
 
 /* Create Tables and insert them into html */
 var options = {scaleFontColor: "#fff",scaleLineColor : "#fff",scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true};

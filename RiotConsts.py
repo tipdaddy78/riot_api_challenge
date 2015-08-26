@@ -43,7 +43,7 @@ ITEMS = {
     'Rod of Ages': 3027,
     'Runeglaive': 3716,
     'Rylais Crystal Scepter': 3116,
-    'Seraphs Embrace': 3048,
+    'Seraphs Embrace': 3040,
     'Void Staff': 3135,
     'Will of the Ancients': 3152,
     'Zhonyas Hourglass': 3157
