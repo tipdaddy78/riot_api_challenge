@@ -21,12 +21,12 @@ request.onload = function() {
     for(i = 0; i < items.length; i++) {
         rankedPickData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
         rankedPickData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
-        rankedWinData511[i] = data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate;
-        rankedWinData514[i] = data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate;
-        normalPickData511[i] = data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate;
-        normalPickData514[i] = data.patches[0].queues[1].regions[1].items[i].stats[4].pick_rate;
-        normalWinData511[i] = data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate;
-        normalWinData514[i] = data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate;
+        rankedWinData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+        rankedWinData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+        normalPickData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+        normalPickData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+        normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+        normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
     }
     alert(rankedPickData514);
 
@@ -48,10 +48,7 @@ request.send();
 
 
 
-var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
-"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
-"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonyas Hourglass"],
+var rankedPick = {labels: items,
     datasets: [
         {
             label: "5.11",
@@ -59,7 +56,7 @@ var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unhol
             strokeColor: "rgba(45,180,174,0.8)",
             highlightFill: "rgba(45,180,174,0.75)",
             highlightStroke: "rgba(45,180,174,1)",
-            data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
+            data: rankedPickData511
         },
         {
             label: "5.14",
@@ -67,15 +64,12 @@ var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unhol
             strokeColor: "rgba(241,215,120,1)",
             highlightFill: "rgba(241,215,120,0.75)",
             highlightStroke: "rgba(241,215,120,1)",
-            data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
+            data: rankedPickData514
         }
     ]
 };
 
-var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
+var rankedWin = {labels: items,
     datasets: [
         {
             label: "5.11",
@@ -83,7 +77,7 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(45,180,174,0.8)",
             highlightFill: "rgba(45,180,174,0.75)",
             highlightStroke: "rgba(45,180,174,1)",
-            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
+            data: rankedWinData511
         },
         {
             label: "5.14",
@@ -91,15 +85,12 @@ var rankedWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(241,215,120,1)",
             highlightFill: "rgba(241,215,120,0.75)",
             highlightStroke: "rgba(241,215,120,1)",
-            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
+            data: rankedWinData514
         }
     ]
 };
 
-var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
+var normalPick = {labels: items,
     datasets: [
         {
             label: "5.11",
@@ -107,7 +98,7 @@ var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unh
             strokeColor: "rgba(45,180,174,0.8)",
             highlightFill: "rgba(45,180,174,0.75)",
             highlightStroke: "rgba(45,180,174,1)",
-            data: [3.59, 0.23, 3.33, 5.69, 3.14, 10.08, 0.59, 6.59, 0.96, 4.94, 9.68, 6.23, 0, 2.41, 5.67, 1.58, 10.71]
+            data: normalPickData511
         },
         {
             label: "5.14",
@@ -115,15 +106,12 @@ var normalPick = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unh
             strokeColor: "rgba(241,215,120,1)",
             highlightFill: "rgba(241,215,120,0.75)",
             highlightStroke: "rgba(241,215,120,1)",
-            data: [5.68, 0.23, 3.33, 5.69, 4.16, 8.09, 0, 5.95, 1.59, 7.19, 9.55, 5.35, 0.32, 4.47, 4.14, 1.21, 10.73]
+            data: normalPickData514
         }
     ]
 };
 
-var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unholy Grail", "Blasting Wand",
-"Liandry's Torment", "Luden's Echo", "Magus", "Morellonomicon", "Nashor's Tooth", "Needlessly Large Rod", 
-"Rabadon's Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonya's Hourglass"],
+var normalWin = {labels: items,
     datasets: [
         {
             label: "5.11",
@@ -131,7 +119,7 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(45,180,174,0.8)",
             highlightFill: "rgba(45,180,174,0.75)",
             highlightStroke: "rgba(45,180,174,1)",
-            data: [48.28, 48.02, 49.67, 46.35, 57.43, 55.94, 51.37, 51.68, 54.23, 55.37, 59.08, 52.08, 0, 56.99, 57.43, 50.96, 56.04]
+            data: normalWinData511
         },
         {
             label: "5.14",
@@ -139,7 +127,7 @@ var normalWin = {labels: ["Amplifying Tome", "Archangel's Staff", "Athene's Unho
             strokeColor: "rgba(241,215,120,1)",
             highlightFill: "rgba(241,215,120,0.75)",
             highlightStroke: "rgba(241,215,120,1)",
-            data: [45.54, 52.25, 49.67, 46.35, 58.78, 54.95, 0, 53.20, 54.24, 54.05, 58.8, 50.82, 52.24, 58.57, 57.41, 51.69, 54.3]
+            data: normalWinData514
         }
     ]
 };
