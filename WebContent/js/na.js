@@ -5,7 +5,7 @@ request.onload = function() {
   if (request.status >= 200 && request.status < 400){
     // Success!
     data = JSON.parse(request.responseText);
-    alert(data["patches"]);
+    alert(data.patches[0].queues[0].regions[0]);
   } else {
     // We reached our target server, but it returned an error
 
