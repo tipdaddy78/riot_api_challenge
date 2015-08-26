@@ -1,3 +1,16 @@
+var rankedPickData511 = [];
+var rankedPickData514 = [];
+var rankedWinData511 = [];
+var rankedWinData514 = [];
+var normalPickData511 = [];
+var normalPickData514 = [];
+var normalWinData511 = [];
+var normalWinData514 = [];
+var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
+"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
+"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
+ "Will of the Ancients", "Zhonyas Hourglass"];
+
 request = new XMLHttpRequest();
 request.open('GET', '../item_analysis.json', true);
 
@@ -5,7 +18,18 @@ request.onload = function() {
   if (request.status >= 200 && request.status < 400){
     // Success!
     data = JSON.parse(request.responseText);
-    alert(data.patches[0].queues[0].regions[0].items[0].stats[4].pick_rate);
+    for(i = 0; i < items.length; i++) {
+        rankedPickData511[i] = data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate;
+        rankedPickData514[i] = data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate;
+        rankedWinData511[i] = data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate;
+        rankedWinData514[i] = data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate;
+        normalPickData511[i] = data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate;
+        normalPickData514[i] = data.patches[0].queues[1].regions[1].items[i].stats[4].pick_rate;
+        normalWinData511[i] = data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate;
+        normalWinData514[i] = data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate;
+    }
+    alert(rankedPickData514);
+
   } else {
     // We reached our target server, but it returned an error
 
@@ -22,10 +46,7 @@ request.send();
 
 
 
-var items = ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
-"Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
-"Rabadons Deathcap", "Rod of Ages", "Runeglaive", "Rylai's Crystal Scepter", "Void Staff",
- "Will of the Ancients", "Zhonyas Hourglass"];
+
 
 var rankedPick = {labels: ["Amplifying Tome", "Archangels Staff", "Athenes Unholy Grail", "Blasting Wand",
 "Liandrys Torment", "Ludens Echo", "Magus", "Morellonomicon", "Nashors Tooth", "Needlessly Large Rod", 
