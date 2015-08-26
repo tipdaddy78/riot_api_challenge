@@ -24,6 +24,7 @@ window.onload = function(){
     request.open('GET', '../item_analysis.json', true);
 
     request.onload = function() {
+        console.log("request.onload")
       if (request.status >= 200 && request.status < 400){
         // Success!
         data = JSON.parse(request.responseText);
