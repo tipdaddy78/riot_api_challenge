@@ -19,8 +19,8 @@ request.onload = function() {
     // Success!
     data = JSON.parse(request.responseText);
     for(i = 0; i < items.length; i++) {
-        rankedPickData511[i] = data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate;
-        rankedPickData514[i] = data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate;
+        rankedPickData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+        rankedPickData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
         rankedWinData511[i] = data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate;
         rankedWinData514[i] = data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate;
         normalPickData511[i] = data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate;
