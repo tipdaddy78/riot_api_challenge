@@ -44,18 +44,18 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(45,180,174,0.5)",
-                    strokeColor: "rgba(45,180,174,0.8)",
-                    highlightFill: "rgba(45,180,174,0.75)",
-                    highlightStroke: "rgba(45,180,174,1)",
+                    fillColor: "rgba(140,230,148,0.5)",
+                    strokeColor: "rgba(140,230,148,0.8)",
+                    highlightFill: "rgba(140,230,148,0.75)",
+                    highlightStroke: "rgba(140,230,148,1)",
                     data: rankedPickData511
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(241,215,120,0.5)",
-                    strokeColor: "rgba(241,215,120,1)",
-                    highlightFill: "rgba(241,215,120,0.75)",
-                    highlightStroke: "rgba(241,215,120,1)",
+                    fillColor: "rgba(44,196,83,0.5)",
+                    strokeColor: "rgba(44,196,83,1)",
+                    highlightFill: "rgba(44,196,83,0.75)",
+                    highlightStroke: "rgba(44,196,83,1)",
                     data: rankedPickData514
                 }
             ]
@@ -65,18 +65,18 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(45,180,174,0.5)",
-                    strokeColor: "rgba(45,180,174,0.8)",
-                    highlightFill: "rgba(45,180,174,0.75)",
-                    highlightStroke: "rgba(45,180,174,1)",
+                    fillColor: "rgba(140,230,148,0.5)",
+                    strokeColor: "rgba(140,230,148,0.8)",
+                    highlightFill: "rgba(140,230,148,0.75)",
+                    highlightStroke: "rgba(140,230,148,1)",
                     data: rankedWinData511
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(241,215,120,0.5)",
-                    strokeColor: "rgba(241,215,120,1)",
-                    highlightFill: "rgba(241,215,120,0.75)",
-                    highlightStroke: "rgba(241,215,120,1)",
+                    fillColor: "rgba(44,196,83,0.5)",
+                    strokeColor: "rgba(44,196,83,1)",
+                    highlightFill: "rgba(44,196,83,0.75)",
+                    highlightStroke: "rgba(44,196,83,1)",
                     data: rankedWinData514
                 }
             ]
@@ -86,18 +86,18 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(45,180,174,0.5)",
-                    strokeColor: "rgba(45,180,174,0.8)",
-                    highlightFill: "rgba(45,180,174,0.75)",
-                    highlightStroke: "rgba(45,180,174,1)",
+                    fillColor: "rgba(140,230,148,0.5)",
+                    strokeColor: "rgba(140,230,148,0.8)",
+                    highlightFill: "rgba(140,230,148,0.75)",
+                    highlightStroke: "rgba(140,230,148,1)",
                     data: normalPickData511
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(241,215,120,0.5)",
-                    strokeColor: "rgba(241,215,120,1)",
-                    highlightFill: "rgba(241,215,120,0.75)",
-                    highlightStroke: "rgba(241,215,120,1)",
+                    fillColor: "rgba(44,196,83,0.5)",
+                    strokeColor: "rgba(44,196,83,1)",
+                    highlightFill: "rgba(44,196,83,0.75)",
+                    highlightStroke: "rgba(44,196,83,1)",
                     data: normalPickData514
                 }
             ]
@@ -107,18 +107,18 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(45,180,174,0.5)",
-                    strokeColor: "rgba(45,180,174,0.8)",
-                    highlightFill: "rgba(45,180,174,0.75)",
-                    highlightStroke: "rgba(45,180,174,1)",
+                    fillColor: "rgba(140,230,148,0.5)",
+                    strokeColor: "rgba(140,230,148,0.8)",
+                    highlightFill: "rgba(140,230,148,0.75)",
+                    highlightStroke: "rgba(140,230,148,1)",
                     data: normalWinData511
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(241,215,120,0.5)",
-                    strokeColor: "rgba(241,215,120,1)",
-                    highlightFill: "rgba(241,215,120,0.75)",
-                    highlightStroke: "rgba(241,215,120,1)",
+                    fillColor: "rgba(44,196,83,0.5)",
+                    strokeColor: "rgba(44,196,83,1)",
+                    highlightFill: "rgba(44,196,83,0.75)",
+                    highlightStroke: "rgba(44,196,83,1)",
                     data: normalWinData514
                 }
             ]
