@@ -56,7 +56,6 @@ waiting = false;
 
 
 /* Create Tables and insert them into html */
-window.onload = function(){
     while(waiting);
 
     var rankedPick = {labels: items,
@@ -154,4 +153,3 @@ window.onload = function(){
     
     document.getElementById('js-legend').innerHTML = myBar.generateLegend();
     document.getElementById('js-legend2').innerHTML = myBar.generateLegend();   
-}
