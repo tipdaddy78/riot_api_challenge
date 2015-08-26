@@ -43,7 +43,7 @@ request.onerror = function() {
 request.send();
 
 
-
+alert(rankedPickData511);
 
 
 
