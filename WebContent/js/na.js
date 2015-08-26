@@ -11,6 +11,10 @@ var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "
 "Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
 "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
  "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
+ var rankedPick = {};
+ var rankedWin = {};
+ var normalPick = {};
+ var normalWin = {};
 function doJsonStuff(){
     /*Load JSON file and fill arrays with data*/
     request = new XMLHttpRequest();
@@ -31,7 +35,7 @@ function doJsonStuff(){
             normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
             normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
         }
-        var rankedPick = {labels: items,
+        rankedPick = {labels: items,
             datasets: [
                 {
                     label: "5.11",
@@ -52,7 +56,7 @@ function doJsonStuff(){
             ]
         };
 
-        var rankedWin = {labels: items,
+        rankedWin = {labels: items,
             datasets: [
                 {
                     label: "5.11",
@@ -73,7 +77,7 @@ function doJsonStuff(){
             ]
         };
 
-        var normalPick = {labels: items,
+        normalPick = {labels: items,
             datasets: [
                 {
                     label: "5.11",
@@ -94,7 +98,7 @@ function doJsonStuff(){
             ]
         };
 
-        var normalWin = {labels: items,
+        normalWin = {labels: items,
             datasets: [
                 {
                     label: "5.11",
