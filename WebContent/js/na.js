@@ -56,7 +56,7 @@ waiting = false;
 
 
 /* Create Tables and insert them into html */
-    while(waiting);
+window.onload = function(){
 
     var rankedPick = {labels: items,
         datasets: [
@@ -153,3 +153,4 @@ waiting = false;
     
     document.getElementById('js-legend').innerHTML = myBar.generateLegend();
     document.getElementById('js-legend2').innerHTML = myBar.generateLegend();   
+}
