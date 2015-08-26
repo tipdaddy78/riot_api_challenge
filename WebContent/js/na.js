@@ -38,110 +38,111 @@ request.onload = function() {
         normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
         normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
     }
-    waiting = false;
   } else {
     // We reached our target server, but it returned an error
+    alert("Failed to parse JSON. Please try again.");
 
   }
 };
 
 request.onerror = function() {
   // There was a connection error of some sort
+  alert("Failed to reach server. Please try again.");
 };
 
 request.send();
 
-
-while(waiting){}
-
-var rankedPick = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: rankedPickData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: rankedPickData514
-        }
-    ]
-};
-
-var rankedWin = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: rankedWinData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: rankedWinData514
-        }
-    ]
-};
-
-var normalPick = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: normalPickData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: normalPickData514
-        }
-    ]
-};
-
-var normalWin = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: normalWinData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: normalWinData514
-        }
-    ]
-};
-
+waiting = false;
 
 
 /* Create Tables and insert them into html */
 window.onload = function(){
+    while(waiting);
+
+    var rankedPick = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: rankedPickData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: rankedPickData514
+            }
+        ]
+    };
+
+    var rankedWin = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: rankedWinData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: rankedWinData514
+            }
+        ]
+    };
+
+    var normalPick = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: normalPickData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: normalPickData514
+            }
+        ]
+    };
+
+    var normalWin = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: normalWinData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: normalWinData514
+            }
+        ]
+    };
+
 	var ctx = document.getElementById("canvas").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(rankedPick, options);
 	var ctx2 = document.getElementById("canvas2").getContext("2d");
