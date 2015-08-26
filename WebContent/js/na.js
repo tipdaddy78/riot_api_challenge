@@ -1,4 +1,4 @@
-/*Initializing graph arrays*/
+/*Initializing Variables*/
 var rankedPickData511 = [];
 var rankedPickData514 = [];
 var rankedWinData511 = [];
@@ -11,10 +11,16 @@ var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "
 "Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
 "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
  "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
- var rankedPick;
- var rankedWin;
- var normalPick;
- var normalWin;
+ var rankedPick = {};
+ var rankedWin = {};
+ var normalPick = {};
+ var normalWin = {};
+ var options = {scaleFontColor: "#fff",
+                scaleLineColor : "#fff",
+                scaleShowHorizontalLines: false, 
+                scaleShowVerticalLines: false, 
+                responsive: true};
+
 function doJsonStuff(){
     /*Load JSON file and fill arrays with data*/
     request = new XMLHttpRequest();
@@ -132,11 +138,7 @@ function doJsonStuff(){
 }
 
 /* Create Tables and insert them into html */
-var options = {scaleFontColor: "#fff",
-                scaleLineColor : "#fff",
-                scaleShowHorizontalLines: false, 
-                scaleShowVerticalLines: false, 
-                responsive: true};
+
 window.onload = function(){
     doJsonStuff();
 
