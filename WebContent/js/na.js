@@ -44,99 +44,96 @@ function doJsonStuff(){
     request.send();
 }
 
-
-
-
-
-/* Setup Tables */
-var rankedPick = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: rankedPickData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: rankedPickData514
-        }
-    ]
-};
-
-var rankedWin = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: rankedWinData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: rankedWinData514
-        }
-    ]
-};
-
-var normalPick = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: normalPickData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: normalPickData514
-        }
-    ]
-};
-
-var normalWin = {labels: items,
-    datasets: [
-        {
-            label: "5.11",
-            fillColor: "rgba(45,180,174,0.5)",
-            strokeColor: "rgba(45,180,174,0.8)",
-            highlightFill: "rgba(45,180,174,0.75)",
-            highlightStroke: "rgba(45,180,174,1)",
-            data: normalWinData511
-        },
-        {
-            label: "5.14",
-            fillColor: "rgba(241,215,120,0.5)",
-            strokeColor: "rgba(241,215,120,1)",
-            highlightFill: "rgba(241,215,120,0.75)",
-            highlightStroke: "rgba(241,215,120,1)",
-            data: normalWinData514
-        }
-    ]
-};
-
 /* Create Tables and insert them into html */
 var options = {scaleFontColor: "#fff",scaleLineColor : "#fff",scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true};
 window.onload = function(){
     doJsonStuff();
+
+    /* Setup Tables */
+    var rankedPick = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: rankedPickData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: rankedPickData514
+            }
+        ]
+    };
+
+    var rankedWin = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: rankedWinData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: rankedWinData514
+            }
+        ]
+    };
+
+    var normalPick = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: normalPickData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: normalPickData514
+            }
+        ]
+    };
+
+    var normalWin = {labels: items,
+        datasets: [
+            {
+                label: "5.11",
+                fillColor: "rgba(45,180,174,0.5)",
+                strokeColor: "rgba(45,180,174,0.8)",
+                highlightFill: "rgba(45,180,174,0.75)",
+                highlightStroke: "rgba(45,180,174,1)",
+                data: normalWinData511
+            },
+            {
+                label: "5.14",
+                fillColor: "rgba(241,215,120,0.5)",
+                strokeColor: "rgba(241,215,120,1)",
+                highlightFill: "rgba(241,215,120,0.75)",
+                highlightStroke: "rgba(241,215,120,1)",
+                data: normalWinData514
+            }
+        ]
+    };
+
 	var ctx = document.getElementById("canvas").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(rankedPick, options);
 	var ctx2 = document.getElementById("canvas2").getContext("2d");
