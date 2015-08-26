@@ -11,37 +11,37 @@ var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "
 "Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
 "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
  "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
+function doJsonStuff(){
+    /*Load JSON file and fill arrays with data*/
+    request = new XMLHttpRequest();
+    request.open('GET', '../item_analysis.json', true);
 
-/*Load JSON file and fill arrays with data*/
-request = new XMLHttpRequest();
-request.open('GET', '../item_analysis.json', true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400){
+        // Success!
+        data = JSON.parse(request.responseText);
+        for(i = 0; i < items.length; i++) {
+            rankedPickData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+            rankedPickData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+            rankedWinData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+            rankedWinData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+            normalPickData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+            normalPickData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
+            normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+            normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
+        }
+      } else {
+        // We reached our target server, but it returned an error
 
-request.onload = function() {
-  if (request.status >= 200 && request.status < 400){
-    // Success!
-    data = JSON.parse(request.responseText);
-    for(i = 0; i < items.length; i++) {
-        rankedPickData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
-        rankedPickData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
-        rankedWinData511[i] = ((data.patches[1].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
-        rankedWinData514[i] = ((data.patches[0].queues[0].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
-        normalPickData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
-        normalPickData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].pick_rate)*100).toFixed(2);
-        normalWinData511[i] = ((data.patches[1].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
-        normalWinData514[i] = ((data.patches[0].queues[1].regions[1].items[i].stats[4].win_rate)*100).toFixed(2);
-    }
-  } else {
-    // We reached our target server, but it returned an error
+      }
+    };
 
-  }
-};
+    request.onerror = function() {
+      // There was a connection error of some sort
+    };
 
-request.onerror = function() {
-  // There was a connection error of some sort
-};
-
-request.send();
-
+    request.send();
+}
 
 
 
@@ -135,6 +135,7 @@ var normalWin = {labels: items,
 /* Create Tables and insert them into html */
 var options = {scaleFontColor: "#fff",scaleLineColor : "#fff",scaleShowHorizontalLines: false, scaleShowVerticalLines: false, responsive: true};
 window.onload = function(){
+    doJsonStuff();
 	var ctx = document.getElementById("canvas").getContext("2d");
 		window.myBar = new Chart(ctx).Bar(rankedPick, options);
 	var ctx2 = document.getElementById("canvas2").getContext("2d");
