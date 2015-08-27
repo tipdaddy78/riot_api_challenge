@@ -8,7 +8,7 @@ window.onload = function(){
     var normalPickData514 = [];
     var normalWinData511 = [];
     var normalWinData514 = [];
-    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive/Magus",
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Magus/Runeglaive",
     "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
@@ -44,19 +44,19 @@ window.onload = function(){
         var rankedPick = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: rankedPickData511
+                },
+                {
+                    label: "5.14 Patch",
                     fillColor: "rgba(218,78,30,0.5)",
                     strokeColor: "rgba(218,78,30,0.8)",
                     highlightFill: "rgba(218,78,30,0.75)",
                     highlightStroke: "rgba(218,78,30,1)",
-                    data: rankedPickData511
-                },
-                {
-                    label: "5.14",
-                    fillColor: "rgba(80,28,11,0.5)",
-                    strokeColor: "rgba(80,28,11,1)",
-                    highlightFill: "rgba(80,28,11,0.75)",
-                    highlightStroke: "rgba(80,28,11,1)",
                     data: rankedPickData514
                 }
             ]
@@ -65,19 +65,19 @@ window.onload = function(){
         var rankedWin = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: rankedWinData511
+                },
+                {
+                    label: "5.14 Patch",
                     fillColor: "rgba(218,78,30,0.5)",
                     strokeColor: "rgba(218,78,30,0.8)",
                     highlightFill: "rgba(218,78,30,0.75)",
                     highlightStroke: "rgba(218,78,30,1)",
-                    data: rankedWinData511
-                },
-                {
-                    label: "5.14",
-                    fillColor: "rgba(80,28,11,0.5)",
-                    strokeColor: "rgba(80,28,11,1)",
-                    highlightFill: "rgba(80,28,11,0.75)",
-                    highlightStroke: "rgba(80,28,11,1)",
                     data: rankedWinData514
                 }
             ]
@@ -86,19 +86,19 @@ window.onload = function(){
         var normalPick = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: normalPickData511
+                },
+                {
+                    label: "5.14 Patch",
                     fillColor: "rgba(218,78,30,0.5)",
                     strokeColor: "rgba(218,78,30,0.8)",
                     highlightFill: "rgba(218,78,30,0.75)",
                     highlightStroke: "rgba(218,78,30,1)",
-                    data: normalPickData511
-                },
-                {
-                    label: "5.14",
-                    fillColor: "rgba(80,28,11,0.5)",
-                    strokeColor: "rgba(80,28,11,1)",
-                    highlightFill: "rgba(80,28,11,0.75)",
-                    highlightStroke: "rgba(80,28,11,1)",
                     data: normalPickData514
                 }
             ]
@@ -107,19 +107,19 @@ window.onload = function(){
         var normalWin = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: normalWinData511
+                },
+                {
+                    label: "5.14 Patch",
                     fillColor: "rgba(218,78,30,0.5)",
                     strokeColor: "rgba(218,78,30,0.8)",
                     highlightFill: "rgba(218,78,30,0.75)",
                     highlightStroke: "rgba(218,78,30,1)",
-                    data: normalWinData511
-                },
-                {
-                    label: "5.14",
-                    fillColor: "rgba(80,28,11,0.5)",
-                    strokeColor: "rgba(80,28,11,1)",
-                    highlightFill: "rgba(80,28,11,0.75)",
-                    highlightStroke: "rgba(80,28,11,1)",
                     data: normalWinData514
                 }
             ]

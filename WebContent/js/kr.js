@@ -8,7 +8,7 @@ window.onload = function(){
     var normalPickData514 = [];
     var normalWinData511 = [];
     var normalWinData514 = [];
-    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive/Magus",
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Magus/Runeglaive",
     "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
@@ -44,7 +44,7 @@ window.onload = function(){
         var rankedPick = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
                     fillColor: "rgba(140,230,148,0.5)",
                     strokeColor: "rgba(140,230,148,0.8)",
                     highlightFill: "rgba(140,230,148,0.75)",
@@ -52,7 +52,7 @@ window.onload = function(){
                     data: rankedPickData511
                 },
                 {
-                    label: "5.14",
+                    label: "5.14 Patch",
                     fillColor: "rgba(44,196,83,0.5)",
                     strokeColor: "rgba(44,196,83,1)",
                     highlightFill: "rgba(44,196,83,0.75)",
@@ -65,7 +65,7 @@ window.onload = function(){
         var rankedWin = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
                     fillColor: "rgba(140,230,148,0.5)",
                     strokeColor: "rgba(140,230,148,0.8)",
                     highlightFill: "rgba(140,230,148,0.75)",
@@ -73,7 +73,7 @@ window.onload = function(){
                     data: rankedWinData511
                 },
                 {
-                    label: "5.14",
+                    label: "5.14 Patch",
                     fillColor: "rgba(44,196,83,0.5)",
                     strokeColor: "rgba(44,196,83,1)",
                     highlightFill: "rgba(44,196,83,0.75)",
@@ -86,7 +86,7 @@ window.onload = function(){
         var normalPick = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
                     fillColor: "rgba(140,230,148,0.5)",
                     strokeColor: "rgba(140,230,148,0.8)",
                     highlightFill: "rgba(140,230,148,0.75)",
@@ -94,7 +94,7 @@ window.onload = function(){
                     data: normalPickData511
                 },
                 {
-                    label: "5.14",
+                    label: "5.14 Patch",
                     fillColor: "rgba(44,196,83,0.5)",
                     strokeColor: "rgba(44,196,83,1)",
                     highlightFill: "rgba(44,196,83,0.75)",
@@ -107,7 +107,7 @@ window.onload = function(){
         var normalWin = {labels: items,
             datasets: [
                 {
-                    label: "5.11",
+                    label: "5.11 Patch",
                     fillColor: "rgba(140,230,148,0.5)",
                     strokeColor: "rgba(140,230,148,0.8)",
                     highlightFill: "rgba(140,230,148,0.75)",
@@ -115,7 +115,7 @@ window.onload = function(){
                     data: normalWinData511
                 },
                 {
-                    label: "5.14",
+                    label: "5.14 Patch",
                     fillColor: "rgba(44,196,83,0.5)",
                     strokeColor: "rgba(44,196,83,1)",
                     highlightFill: "rgba(44,196,83,0.75)",
@@ -139,7 +139,7 @@ window.onload = function(){
             console.log("tried to make graph4");
         
         document.getElementById('js-legend').innerHTML = myBar.generateLegend();
-        document.getElementById('js-legend2').innerHTML = myBar.generateLegend(); 
+        document.getElementById('js-legend2').innerHTML = myBar2.generateLegend(); 
       } else {
         // We reached our target server, but it returned an error
         alert("Failed to parse JSON. Please try again.");
