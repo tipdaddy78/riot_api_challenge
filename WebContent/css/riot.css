@@ -57,7 +57,7 @@
 }
 
 }
-li span {
+.chart-legend .bar-legend li span {
     display: inline-block;
     width: 12px;
     height: 12px;
