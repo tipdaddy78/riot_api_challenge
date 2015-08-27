@@ -115,3 +115,7 @@ tr > th {
   color: white;
   list-style-type: none;
 }
+
+.info-text {
+  color: white;
+}
