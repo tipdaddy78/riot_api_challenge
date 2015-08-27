@@ -44,10 +44,10 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(214,81,36,0.5)",
-                    strokeColor: "rgba(214,81,36,0.8)",
-                    highlightFill: "rgba(214,81,36,0.75)",
-                    highlightStroke: "rgba(214,81,36,1)",
+                    fillColor: "rgba(218,78,30,0.5)",
+                    strokeColor: "rgba(218,78,30,0.8)",
+                    highlightFill: "rgba(218,78,30,0.75)",
+                    highlightStroke: "rgba(218,78,30,1)",
                     data: rankedPickData511
                 },
                 {
@@ -65,10 +65,10 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(214,81,36,0.5)",
-                    strokeColor: "rgba(214,81,36,0.8)",
-                    highlightFill: "rgba(214,81,36,0.75)",
-                    highlightStroke: "rgba(214,81,36,1)",
+                    fillColor: "rgba(218,78,30,0.5)",
+                    strokeColor: "rgba(218,78,30,0.8)",
+                    highlightFill: "rgba(218,78,30,0.75)",
+                    highlightStroke: "rgba(218,78,30,1)",
                     data: rankedWinData511
                 },
                 {
@@ -86,10 +86,10 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(214,81,36,0.5)",
-                    strokeColor: "rgba(214,81,36,0.8)",
-                    highlightFill: "rgba(214,81,36,0.75)",
-                    highlightStroke: "rgba(214,81,36,1)",
+                    fillColor: "rgba(218,78,30,0.5)",
+                    strokeColor: "rgba(218,78,30,0.8)",
+                    highlightFill: "rgba(218,78,30,0.75)",
+                    highlightStroke: "rgba(218,78,30,1)",
                     data: normalPickData511
                 },
                 {
@@ -107,10 +107,10 @@ window.onload = function(){
             datasets: [
                 {
                     label: "5.11",
-                    fillColor: "rgba(214,81,36,0.5)",
-                    strokeColor: "rgba(214,81,36,0.8)",
-                    highlightFill: "rgba(214,81,36,0.75)",
-                    highlightStroke: "rgba(214,81,36,1)",
+                    fillColor: "rgba(218,78,30,0.5)",
+                    strokeColor: "rgba(218,78,30,0.8)",
+                    highlightFill: "rgba(218,78,30,0.75)",
+                    highlightStroke: "rgba(218,78,30,1)",
                     data: normalWinData511
                 },
                 {
