@@ -52,10 +52,10 @@ window.onload = function(){
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(178,61,23,0.5)",
-                    strokeColor: "rgba(178,61,23,1)",
-                    highlightFill: "rgba(178,61,23,0.75)",
-                    highlightStroke: "rgba(178,61,23,1)",
+                    fillColor: "rgba(80,28,11,0.5)",
+                    strokeColor: "rgba(80,28,11,1)",
+                    highlightFill: "rgba(80,28,11,0.75)",
+                    highlightStroke: "rgba(80,28,11,1)",
                     data: rankedPickData514
                 }
             ]
@@ -73,10 +73,10 @@ window.onload = function(){
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(178,61,23,0.5)",
-                    strokeColor: "rgba(178,61,23,1)",
-                    highlightFill: "rgba(178,61,23,0.75)",
-                    highlightStroke: "rgba(178,61,23,1)",
+                    fillColor: "rgba(80,28,11,0.5)",
+                    strokeColor: "rgba(80,28,11,1)",
+                    highlightFill: "rgba(80,28,11,0.75)",
+                    highlightStroke: "rgba(80,28,11,1)",
                     data: rankedWinData514
                 }
             ]
@@ -94,10 +94,10 @@ window.onload = function(){
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(178,61,23,0.5)",
-                    strokeColor: "rgba(178,61,23,1)",
-                    highlightFill: "rgba(178,61,23,0.75)",
-                    highlightStroke: "rgba(178,61,23,1)",
+                    fillColor: "rgba(80,28,11,0.5)",
+                    strokeColor: "rgba(80,28,11,1)",
+                    highlightFill: "rgba(80,28,11,0.75)",
+                    highlightStroke: "rgba(80,28,11,1)",
                     data: normalPickData514
                 }
             ]
@@ -115,10 +115,10 @@ window.onload = function(){
                 },
                 {
                     label: "5.14",
-                    fillColor: "rgba(178,61,23,0.5)",
-                    strokeColor: "rgba(178,61,23,1)",
-                    highlightFill: "rgba(178,61,23,0.75)",
-                    highlightStroke: "rgba(178,61,23,1)",
+                    fillColor: "rgba(80,28,11,0.5)",
+                    strokeColor: "rgba(80,28,11,1)",
+                    highlightFill: "rgba(80,28,11,0.75)",
+                    highlightStroke: "rgba(80,28,11,1)",
                     data: normalWinData514
                 }
             ]
