@@ -111,8 +111,9 @@
 <div class="container">
 	<h1 style="color: #A1AFD6">Select Your Filters</h1>
 	<div class="row">
-		<div class="small-4 columns">
-			<select placeholder="Select an Item" required>
+		<div class="small-3 columns">
+			<input list="item" required>
+			<datalist id="item" required>
 			  <option value="Amplifying Tome">Amplifying Tome</option>
 			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
 			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
@@ -130,21 +131,23 @@
 			  <option value="Void Staff">Void Staff</option>
 			  <option value="Will of the Ancients">Will of the Ancients</option>
 			  <option value="Zhonyas Hourglass">Zhonya&#39;s Hourglass</option> 
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Lane">
+		<div class="small-3 columns">
+			<input list="lane">
+			<datalist id="lane">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
 				<option value="Middle">Middle</option>
 				<option value="Top">Top</option>
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Champion">
+		<div class="small-3 columns">
+			<input list="champion">
+			<datalist id="champion">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
@@ -270,26 +273,12 @@
 			  <option value="Ziggs">Ziggs</option>
 			  <option value="Zilean">Zilean</option>
 			  <option value="Zyra">Zyra</option>
-			</select>
+			</datalist>
+		</div>
+		<div class="small-3 columns">
+			<input type="submit" value="Search" class="small radius button">
 		</div>
 	</div>
-	<div class="row">
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-		<div class="small-4 columns">
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-		<div>
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-	</div>
-	&nbsp;
 </div>
 
 <footer>
