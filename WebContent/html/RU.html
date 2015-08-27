@@ -106,11 +106,14 @@
   <div id="js-legend2" class="chart-legend"></div>
 </div>
 
+<form action="LAS.html#table" method="get">
 <div class="container">
-	<h1 style="color: #FA625A">Select Your Filters</h1>
+	<h1 style="color: #FA625A">Enter Your Filters</h1>
 	<div class="row">
-		<div class="small-4 columns">
-			<select placeholder="Select an Item" required>
+		<div class="small-3 columns">
+			<label for="item" style="color: #FA625A">Item</label>
+			<input list="items" name="item" id="item" required>
+			<datalist id="items">
 			  <option value="Amplifying Tome">Amplifying Tome</option>
 			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
 			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
@@ -128,21 +131,25 @@
 			  <option value="Void Staff">Void Staff</option>
 			  <option value="Will of the Ancients">Will of the Ancients</option>
 			  <option value="Zhonyas Hourglass">Zhonya&#39;s Hourglass</option> 
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Lane">
+		<div class="small-3 columns">
+			<label for="lane" style="color: #FA625A">Lane</label>
+			<input list="lanes" name="lane" id="lane">
+			<datalist id="lanes">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
 				<option value="Middle">Middle</option>
 				<option value="Top">Top</option>
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Champion">
+		<div class="small-3 columns">
+			<label for="champion" style="color: #FA625A">Champion</label>
+			<input list="champions" name="champion" id="champion">
+			<datalist id="champions">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
@@ -268,26 +275,35 @@
 			  <option value="Ziggs">Ziggs</option>
 			  <option value="Zilean">Zilean</option>
 			  <option value="Zyra">Zyra</option>
-			</select>
+			</datalist>
+		</div>
+		<div class="small-3 columns">
+			<input type="submit" value="Search" class="small radius button" style="background-color: #FA625A; width: 100%">
 		</div>
 	</div>
-	<div class="row">
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-		<div class="small-4 columns">
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-		<div>
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-	</div>
-	&nbsp;
+</div>
+</form>
+
+<div class="container">
+	<table class="itemTable" id="table">
+		<thead>
+			<tr>
+				<th>Champion</th>
+				<th>Lane</th>
+				<th>5.11 Ranked Pick Rate</th>
+				<th>5.14 Ranked Pick Rate</th>
+				<th>5.11 Normal Pick Rate</th>
+				<th>5.14 Normal Pick Rate</th>
+				<th>5.11 Ranked Win Rate</th>
+				<th>5.14 Ranked Win Rate</th>
+				<th>5.11 Normal Win Rate</th>
+				<th>5.14 Normal Win Rate</th>
+			</tr>
+		</thead>
+		<tbody id="tableBody striped" role="grid">
+	
+		</tbody>
+	</table>
 </div>
 
 <footer>

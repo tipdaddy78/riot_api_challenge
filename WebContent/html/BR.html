@@ -108,11 +108,14 @@
 
 
 
+<form action="LAS.html#table" method="get">
 <div class="container">
-	<h1 style="color: #FDE459">Select Your Filters</h1>
+	<h1 style="color: #FDE459">Enter Your Filters</h1>
 	<div class="row">
-		<div class="small-4 columns">
-			<select placeholder="Select an Item" required>
+		<div class="small-3 columns">
+			<label for="item" style="color: #FDE459">Item</label>
+			<input list="items" name="item" id="item" required>
+			<datalist id="items">
 			  <option value="Amplifying Tome">Amplifying Tome</option>
 			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
 			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
@@ -130,21 +133,25 @@
 			  <option value="Void Staff">Void Staff</option>
 			  <option value="Will of the Ancients">Will of the Ancients</option>
 			  <option value="Zhonyas Hourglass">Zhonya&#39;s Hourglass</option> 
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Lane">
+		<div class="small-3 columns">
+			<label for="lane" style="color: #FDE459">Lane</label>
+			<input list="lanes" name="lane" id="lane">
+			<datalist id="lanes">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
 				<option value="Middle">Middle</option>
 				<option value="Top">Top</option>
-			</select>
+			</datalist>
 
 		</div>
-		<div class="small-4 columns">
-			<select placeholder="Select a Champion">
+		<div class="small-3 columns">
+			<label for="champion" style="color: #FDE459">Champion</label>
+			<input list="champions" name="champion" id="champion">
+			<datalist id="champions">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
@@ -270,32 +277,17 @@
 			  <option value="Ziggs">Ziggs</option>
 			  <option value="Zilean">Zilean</option>
 			  <option value="Zyra">Zyra</option>
-			</select>
+			</datalist>
+		</div>
+		<div class="small-3 columns">
+			<input type="submit" value="Search" class="small radius button" style="color: black; background-color: #FDE459; width: 100%">
 		</div>
 	</div>
-	<div class="row">
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-		<div class="small-4 columns">
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-			<div class="small-2 columns">
-				<button value="submit" />
-			</div>
-		</div>
-		<div class="small-4 columns">
-			&nbsp;
-		</div>
-	</div>
-	&nbsp;
 </div>
-
-<br>
+</form>
 
 <div class="container">
-	<table class="itemTable">
+	<table class="itemTable" id="table">
 		<thead>
 			<tr>
 				<th>Champion</th>
@@ -311,27 +303,7 @@
 			</tr>
 		</thead>
 		<tbody id="tableBody striped" role="grid">
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Aatrox.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Ahri.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Ekko.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Pantheon.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Jinx.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/Ezreal.png" /> </td>
-			</tr>
-			<tr>
-				<td><img src="http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/TahmKench.png" /> </td>
-			</tr>
+	
 		</tbody>
 	</table>
 </div>
