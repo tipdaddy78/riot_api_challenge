@@ -16,7 +16,8 @@ window.onload = function(){
                     scaleLineColor : "#fff",
                     scaleShowHorizontalLines: false, 
                     scaleShowVerticalLines: false, 
-                    responsive: true};
+                    responsive: true, 
+                    multiTooltipTemplate: "<%= value %>%"};
 
 
     /*Load JSON file and fill arrays with data*/
