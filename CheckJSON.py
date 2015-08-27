@@ -7,4 +7,4 @@ def main(file):
 
 
 if __name__ == "__main__":
-    main("../item_data/item_analysis.json")
+    main("WebContent/item_analysis.json")

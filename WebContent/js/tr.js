@@ -8,8 +8,8 @@ window.onload = function(){
     var normalPickData514 = [];
     var normalWinData511 = [];
     var normalWinData514 = [];
-    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive",
-    "Magus", "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Runeglaive/Magus",
+    "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
      var options = {scaleFontColor: "#fff",
