@@ -57,8 +57,7 @@
 }
 
 }
-
-.chart-legend li span{
+.chart-legend ul li span{
     display: inline-block;
     width: 12px;
     height: 12px;
