@@ -112,8 +112,9 @@
 	<h1 style="color: #A1AFD6">Select Your Filters</h1>
 	<div class="row">
 		<div class="small-3 columns">
-			<input list="item" required>
-			<datalist id="item" required>
+			<label for="item">Item</label>
+			<input list="items" name="item" id="item" required>
+			<datalist id="items">
 			  <option value="Amplifying Tome">Amplifying Tome</option>
 			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
 			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
@@ -135,8 +136,9 @@
 
 		</div>
 		<div class="small-3 columns">
-			<input list="lane">
-			<datalist id="lane">
+			<label for="lane">Lane</label>
+			<input list="lanes" name="lane" id="lane">
+			<datalist id="lanes">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
@@ -146,8 +148,9 @@
 
 		</div>
 		<div class="small-3 columns">
-			<input list="champion">
-			<datalist id="champion">
+			<label for="champion">Champion</label>
+			<input list="champions" name="champion" id="champion">
+			<datalist id="champions">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
