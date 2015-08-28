@@ -95,7 +95,7 @@ window.onload = function(){
                 normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
-                var newRow   = table.insertRow(tableRef.rows.length);
+                var newRow   = table.insertRow(table.rows.length);
 
                 // Insert a cell in the row at index 0
                 var newCell  = newRow.insertCell(0);
