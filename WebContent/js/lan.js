@@ -100,45 +100,45 @@ window.onload = function(){
                 // Insert a cell in the row at index 0
                 var newCell  = newRow.insertCell(0);
                 // Append a text node to the cell
-                var data  = document.createElement('img');
-                data.src = 'http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/' + champName + '.png';
-                newCell.appendChild(data);
+                var tableData  = document.createElement('img');
+                tableData.src = 'http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/' + champName + '.png';
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(1);
-                data = document.createTextNode(champLane);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(champLane);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(2);
-                data = document.createTextNode(rankedChampPick511);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(rankedChampPick511);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(3);
-                data = document.createTextNode(rankedChampPick514);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(rankedChampPick514);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(4);
-                data = document.createTextNode(rankedChampWin511);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(rankedChampWin511);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(5);
-                data = document.createTextNode(rankedChampWin514);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(rankedChampWin514);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(6);
-                data = document.createTextNode(normalChampPick511);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(normalChampPick511);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(7);
-                data = document.createTextNode(normalChampPick514);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(normalChampPick514);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(8);
-                data = document.createTextNode(normalChampWin511);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(normalChampWin511);
+                newCell.appendChild(tableData);
 
                 newCell = newRow.insertCell(9);
-                data = document.createTextNode(normalChampWin514);
-                newCell.appendChild(data);
+                tableData = document.createTextNode(normalChampWin514);
+                newCell.appendChild(tableData);
 
                 index += 5;
             }
