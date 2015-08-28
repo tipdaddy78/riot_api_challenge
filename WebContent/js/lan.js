@@ -44,6 +44,7 @@ window.onload = function(){
         var normalChampPick514;
         var normalChampWin511;
         var normalChampWin514;
+        
         /* If the form was submitted, this function allows us to get the arguments */
         var QueryString = function () {
           // This function is anonymous, is executed immediately and 
