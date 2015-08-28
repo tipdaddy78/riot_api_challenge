@@ -72,6 +72,8 @@ window.onload = function(){
         var selLane = QueryString.lane;
 
         if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
+            var skinBox = document.getElementById("skins");
+
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
@@ -131,6 +133,10 @@ window.onload = function(){
                         newCell = newRow.insertCell(9);
                         tableData = document.createTextNode(normalChampWin514);
                         newCell.appendChild(tableData);
+
+                        var skin1 = document.createElement('img');
+                        skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
+                        skinBox.appendChild(skin1);
 
                     }
                     break;
