@@ -48,12 +48,10 @@ window.onload = function(){
     request.open('GET', '../item_analysis.json', true);
 
     request.onload = function() {
-        console.log("request.onload")
       if (request.status >= 200 && request.status < 400){
         // Success!
         data = JSON.parse(request.responseText);
         for(i = 0; i < items.length; i++) {
-            console.log("Getting data for item" + i);
             rankedPickData511[i] = ((data.patches[1].queues[0].regions[5].items[i].stats[4].pick_rate)*100).toFixed(2);
             rankedPickData514[i] = ((data.patches[0].queues[0].regions[5].items[i].stats[4].pick_rate)*100).toFixed(2);
             rankedWinData511[i] = ((data.patches[1].queues[0].regions[5].items[i].stats[4].win_rate)*100).toFixed(2);
@@ -439,16 +437,12 @@ window.onload = function(){
 
         var ctx = document.getElementById("canvas").getContext("2d");
             window.myBar = new Chart(ctx).Bar(rankedPick, options);
-            console.log("tried to make graph1");
         var ctx2 = document.getElementById("canvas2").getContext("2d");
             window.myBar2 = new Chart(ctx2).Bar(rankedWin, options);
-            console.log("tried to make graph2");
         var ctx3 = document.getElementById("canvas3").getContext("2d");
             window.myBar3 = new Chart(ctx3).Bar(normalPick, options);
-            console.log("tried to make graph3");
         var ctx4 = document.getElementById("canvas4").getContext("2d");
             window.myBar4 = new Chart(ctx4).Bar(normalWin, options);
-            console.log("tried to make graph4");
         
         document.getElementById('js-legend').innerHTML = myBar.generateLegend();
         document.getElementById('js-legend2').innerHTML = myBar.generateLegend(); 
