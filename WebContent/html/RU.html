@@ -106,50 +106,47 @@
   <div id="js-legend2" class="chart-legend"></div>
 </div>
 
-<form action="RU.html#table" method="get">
+<form action="RU.html#skins" method="get">
 <div class="container">
 	<h1 style="color: #FA625A">Enter Your Filters</h1>
 	<div class="row">
 		<div class="small-3 columns">
 			<label for="item" style="color: #FA625A">Item</label>
-			<input list="items" name="item" id="item" required>
-			<datalist id="items">
-			  <option value="Amplifying Tome">Amplifying Tome</option>
-			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
-			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
-			  <option value="Blasting Wand">Blasting Wand</option>
-			  <option value="Jungle Items">Jungle Items</option>
-			  <option value="Liandrys Torment">Liandry&#39;s Torment</option>
-			  <option value="Ludens Echo">Luden&#39;s Echo</option>
-			  <option value="Morellonomicon">Morellonomicon</option>
-			  <option value="Nashors Tooth">Nashor&#39;s Tooth</option>
-			  <option value="Needlessly Large Rod">Needlessly Large Rod</option>
-			  <option value="Rabadons Deathcap">Rabadon&#39;s Deathcap</option>
-			  <option value="Rod of Ages">Rod of Ages</option>
-			  <option value="Rylais Crystal Scepter">Rylai&#39;s Crystal Scepter</option>
-			  <option value="Seraphs Embrace">Seraph&#39;s Embrace</option>
-			  <option value="Void Staff">Void Staff</option>
-			  <option value="Will of the Ancients">Will of the Ancients</option>
-			  <option value="Zhonyas Hourglass">Zhonya&#39;s Hourglass</option> 
-			</datalist>
+			<select name="item" id="item" required>
+			  <option value="13">Amplifying Tome</option>
+			  <option value="15">Archangel&#39;s Staff</option>
+			  <option value="1">Athene&#39;s Unholy Grail</option>
+			  <option value="2">Blasting Wand</option>
+			  <option value="3">Jungle Items</option>
+			  <option value="6">Liandry&#39;s Torment</option>
+			  <option value="5">Luden&#39;s Echo</option>
+			  <option value="9">Morellonomicon</option>
+			  <option value="11">Nashor&#39;s Tooth</option>
+			  <option value="0">Needlessly Large Rod</option>
+			  <option value="4">Rabadon&#39;s Deathcap</option>
+			  <option value="14">Rod of Ages</option>
+			  <option value="12">Rylai&#39;s Crystal Scepter</option>
+			  <option value="8">Seraph&#39;s Embrace</option>
+			  <option value="10">Void Staff</option>
+			  <option value="7">Will of the Ancients</option>
+			  <option value="16">Zhonya&#39;s Hourglass</option> 
+			</select>
 
 		</div>
 		<div class="small-3 columns">
-			<label for="lane" style="color: #FA625A">Lane</label>
-			<input list="lanes" name="lane" id="lane">
-			<datalist id="lanes">
+			<label for="lane" style="color: #72E7FF">Lane</label>
+			<select name="lane" id="lane">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
 				<option value="Middle">Middle</option>
 				<option value="Top">Top</option>
-			</datalist>
+			</select>
 
 		</div>
 		<div class="small-3 columns">
 			<label for="champion" style="color: #FA625A">Champion</label>
-			<input list="champions" name="champion" id="champion">
-			<datalist id="champions">
+			<select name="champion" id="champion">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
@@ -166,17 +163,17 @@
 			  <option value="Braum">Braum</option>
 			  <option value="Caitlyn">Caitlyn</option>
 			  <option value="Cassiopeia">Cassiopeia</option>
-			  <option value="ChoGath">Cho&#39;Gath</option>
+			  <option value="Chogath">Cho&#39;Gath</option>
 			  <option value="Corki">Corki</option>
 			  <option value="Darius">Darius</option>
 			  <option value="Diana">Diana</option>
-			  <option value="Dr. Mundo">Dr. Mundo</option>
+			  <option value="DrMundo">Dr. Mundo</option>
 			  <option value="Draven">Draven</option>
 			  <option value="Ekko">Ekko</option>
 			  <option value="Elise">Elise</option>
 			  <option value="Evelynn">Evelynn</option>
 			  <option value="Ezreal">Ezreal</option>
-			  <option value="Fiddlesticks">Fiddlesticks</option>
+			  <option value="FiddleSticks">Fiddlesticks</option>
 			  <option value="Fiora">Fiora</option>
 			  <option value="Fizz">Fizz</option>
 			  <option value="Galio">Galio</option>
@@ -188,7 +185,7 @@
 			  <option value="Heimerdinger">Heimerdinger</option>
 			  <option value="Irelia">Irelia</option>
 			  <option value="Janna">Janna</option>
-			  <option value="Jarvan IV">Jarvan IV</option>
+			  <option value="JarvanIV">Jarvan IV</option>
 			  <option value="Jax">Jax</option>
 			  <option value="Jayce">Jayce</option>
 			  <option value="Jinx">Jinx</option>
@@ -199,10 +196,10 @@
 			  <option value="Katarina">Katarina</option>
 			  <option value="Kayle">Kayle</option>
 			  <option value="Kennen">Kennen</option>
-			  <option value="KhaZix">Kha&#39;Zix</option>
+			  <option value="Khazix">Kha&#39;Zix</option>
 			  <option value="KogMaw">Kog&#39;Maw</option>
-			  <option value="LeBlanc">LeBlanc</option>
-			  <option value="Lee Sin">Lee Sin</option>
+			  <option value="Leblanc">LeBlanc</option>
+			  <option value="LeeSin">Lee Sin</option>
 			  <option value="Leona">Leona</option>
 			  <option value="Lissandra">Lissandra</option>
 			  <option value="Lucian">Lucian</option>
@@ -211,8 +208,8 @@
 			  <option value="Malphite">Malphite</option>
 			  <option value="Malzahar">Malzahar</option>
 			  <option value="Maokai">Maokai</option>
-			  <option value="Master Yi">Master Yi</option>
-			  <option value="Miss Fortune">Miss Fortune</option>
+			  <option value="MasterYi">Master Yi</option>
+			  <option value="MissFortune">Miss Fortune</option>
 			  <option value="Mordekaiser">Mordekaiser</option>
 			  <option value="Morgana">Morgana</option>
 			  <option value="Nami">Nami</option>
@@ -227,7 +224,7 @@
 			  <option value="Poppy">Poppy</option>
 			  <option value="Quinn">Quinn</option>
 			  <option value="Rammus">Rammus</option>
-			  <option value="RekSai">Rek&#39;Sai</option>
+			  <option value="Reksai">Rek&#39;Sai</option>
 			  <option value="Rengar">Rengar</option>
 			  <option value="Riven">Riven</option>
 			  <option value="Rumble">Rumble</option>
@@ -244,7 +241,7 @@
 			  <option value="Soraka">Soraka</option>
 			  <option value="Swain">Swain</option>
 			  <option value="Syndra">Syndra</option>
-			  <option value="Tahm Kench">Tahm Kench</option>
+			  <option value="TahmKench">Tahm Kench</option>
 			  <option value="Talon">Talon</option>
 			  <option value="Taric">Taric</option>
 			  <option value="Teemo">Teemo</option>
@@ -252,22 +249,22 @@
 			  <option value="Tristana">Tristana</option>
 			  <option value="Trundle">Trundle</option>
 			  <option value="Tryndamere">Tryndamere</option>
-			  <option value="Twisted Fate">Twisted Fate</option>
+			  <option value="TwistedFate">Twisted Fate</option>
 			  <option value="Twitch">Twitch</option>
 			  <option value="Udyr">Udyr</option>
 			  <option value="Urgot">Urgot</option>  
 			  <option value="Varus">Varus</option>
 			  <option value="Vayne">Vayne</option>
 			  <option value="Veigar">Veigar</option>  
-			  <option value="VelKoz">Vel&#39;Koz</option>
+			  <option value="Velkoz">Vel&#39;Koz</option>
 			  <option value="Vi">Vi</option>
 			  <option value="Viktor">Viktor</option>
 			  <option value="Vladimir">Vladimir</option>
 			  <option value="Volibear">Volibear</option>
 			  <option value="Warwick">Warwick</option>
-			  <option value="Wukong">Wukong</option>
+			  <option value="MonkeyKing">Wukong</option>
 			  <option value="Xerath">Xerath</option>  
-			  <option value="Xin Zhao">Xin Zhao</option>
+			  <option value="XinZhao">Xin Zhao</option>
 			  <option value="Yasuo">Yasuo</option>
 			  <option value="Yorick">Yorick</option>  
 			  <option value="Zac">Zac</option>
@@ -275,7 +272,7 @@
 			  <option value="Ziggs">Ziggs</option>
 			  <option value="Zilean">Zilean</option>
 			  <option value="Zyra">Zyra</option>
-			</datalist>
+			</select>
 		</div>
 		<div class="small-3 columns">
 			<input type="submit" value="Search" class="small radius button" style="font-weight: bold; color:black; background-color: #FA625A; width: 100%">
