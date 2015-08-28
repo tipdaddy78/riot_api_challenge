@@ -212,7 +212,8 @@ window.onload = function(){
                 newCell.appendChild(tableData);
 
                 index += 5;
-        } else if (selLane != "" && selChampion != "") {// Both Lane and Champion Specified
+            }
+        } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
@@ -288,6 +289,7 @@ window.onload = function(){
                 } else {
                     index += 5;
                 }
+            }
         } else {// Neither lane, nor champion specified
             var index = 9;
             for(i = 0; i < 126; i++) {
