@@ -12,12 +12,8 @@ window.onload = function(){
     "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
-     var options = {scaleFontColor: "#fff",
-                    scaleLineColor : "#fff",
-                    scaleShowHorizontalLines: false, 
-                    scaleShowVerticalLines: false, 
-                    responsive: true, 
-                    multiTooltipTemplate: "<%= value %>%"};
+    var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
 
 
     /*Load JSON file and fill arrays with data*/
