@@ -214,6 +214,9 @@ window.onload = function(){
                 index += 5;
             }
         } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
+            if (selItem == ""){ // On initial load it will go into this block so stop it from trying to generate a graph.
+                continue;
+            }
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
