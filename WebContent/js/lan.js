@@ -77,7 +77,7 @@ window.onload = function(){
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
-                    for(int j = 0; j < 4; j++){
+                    for(j = 0; j < 4; j++){
                         champName = data.patches[0].queues[0].regions[5].items[selItem].stats[j].champion;
                         champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[j].lane; 
                         rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
