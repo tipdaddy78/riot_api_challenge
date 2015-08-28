@@ -77,17 +77,17 @@ window.onload = function(){
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
-                    for(index; index < index+5; index++){
-                        champName = data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion;
-                        champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[index].lane; 
-                        rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                    for(int j = 0; j < 4; j++){
+                        champName = data.patches[0].queues[0].regions[5].items[selItem].stats[j].champion;
+                        champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[j].lane; 
+                        rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
 
                         var newRow   = table.insertRow(table.rows.length);
 
@@ -137,9 +137,8 @@ window.onload = function(){
                         var skin1 = document.createElement('img');
                         skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
                         skinBox.appendChild(skin1);
-                        break;
                     }
-                    
+                break;  
                 } else {
                     index += 5;
                 }
@@ -218,6 +217,7 @@ window.onload = function(){
                 index += 5;
             }
         } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
+            var skinBox = document.getElementById("skins");
             if (isNaN(selItem)){ // On initial load it will go into this block so stop it from trying to generate a graph.
                 
             } else {
@@ -292,6 +292,11 @@ window.onload = function(){
                         newCell = newRow.insertCell(9);
                         tableData = document.createTextNode(normalChampWin514);
                         newCell.appendChild(tableData);
+
+                        var skin1 = document.createElement('img');
+                        skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
+                        skinBox.appendChild(skin1);
+
                         break;
                     } else {
                         index += 5;
