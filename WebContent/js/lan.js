@@ -73,7 +73,7 @@ window.onload = function(){
         var normalChampWin511;
         var normalChampWin514;
 
-        if(selLane == "" && selChampion != "") {// Lane not specified, Champion IS specified
+        if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
@@ -139,6 +139,7 @@ window.onload = function(){
                 } else {
                     index += 5;
                 }
+            }
         } else if (selLane != "" && selChampion == "") { // Lane IS specified, Champion not specified
             switch(selLane){
                 case "Bottom":
