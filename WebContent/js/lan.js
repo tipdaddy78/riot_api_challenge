@@ -77,7 +77,7 @@ window.onload = function(){
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
-                    for(j = 0; j < 4; j++){
+                    for(j = index; j < (index+4); j++){
                         champName = data.patches[0].queues[0].regions[5].items[selItem].stats[j].champion;
                         champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[j].lane; 
                         rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
@@ -133,11 +133,10 @@ window.onload = function(){
                         newCell = newRow.insertCell(9);
                         tableData = document.createTextNode(normalChampWin514);
                         newCell.appendChild(tableData);
-
-                        var skin1 = document.createElement('img');
-                        skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
-                        skinBox.appendChild(skin1);
                     }
+                var skin1 = document.createElement('img');
+                skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
+                skinBox.appendChild(skin1);
                 break;  
                 } else {
                     index += 5;
