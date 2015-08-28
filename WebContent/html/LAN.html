@@ -114,44 +114,41 @@
 	<div class="row">
 		<div class="small-3 columns">
 			<label for="item" style="color: #A1AFD6">Item</label>
-			<input list="items" name="item" id="item" required>
-			<datalist id="items">
-			  <option value="Amplifying Tome">Amplifying Tome</option>
-			  <option value="Archangels Staff">Archangel&#39;s Staff</option>
-			  <option value="Athenes Unholy Grail">Athene&#39;s Unholy Grail</option>
-			  <option value="Blasting Wand">Blasting Wand</option>
-			  <option value="Jungle Items">Jungle Items</option>
-			  <option value="Liandrys Torment">Liandry&#39;s Torment</option>
-			  <option value="Ludens Echo">Luden&#39;s Echo</option>
-			  <option value="Morellonomicon">Morellonomicon</option>
-			  <option value="Nashors Tooth">Nashor&#39;s Tooth</option>
-			  <option value="Needlessly Large Rod">Needlessly Large Rod</option>
-			  <option value="Rabadons Deathcap">Rabadon&#39;s Deathcap</option>
-			  <option value="Rod of Ages">Rod of Ages</option>
-			  <option value="Rylais Crystal Scepter">Rylai&#39;s Crystal Scepter</option>
-			  <option value="Seraphs Embrace">Seraph&#39;s Embrace</option>
-			  <option value="Void Staff">Void Staff</option>
-			  <option value="Will of the Ancients">Will of the Ancients</option>
-			  <option value="Zhonyas Hourglass">Zhonya&#39;s Hourglass</option> 
-			</datalist>
+			<select name="item" id="item" required>
+			  <option value="13">Amplifying Tome</option>
+			  <option value="15">Archangel&#39;s Staff</option>
+			  <option value="1">Athene&#39;s Unholy Grail</option>
+			  <option value="2">Blasting Wand</option>
+			  <option value="3">Jungle Items</option>
+			  <option value="6">Liandry&#39;s Torment</option>
+			  <option value="5">Luden&#39;s Echo</option>
+			  <option value="9">Morellonomicon</option>
+			  <option value="11">Nashor&#39;s Tooth</option>
+			  <option value="0">Needlessly Large Rod</option>
+			  <option value="4">Rabadon&#39;s Deathcap</option>
+			  <option value="14">Rod of Ages</option>
+			  <option value="12">Rylai&#39;s Crystal Scepter</option>
+			  <option value="8">Seraph&#39;s Embrace</option>
+			  <option value="10">Void Staff</option>
+			  <option value="7">Will of the Ancients</option>
+			  <option value="16">Zhonya&#39;s Hourglass</option> 
+			</select>
 
 		</div>
 		<div class="small-3 columns">
 			<label for="lane" style="color: #72E7FF">Lane</label>
-			<input list="lanes" name="lane" id="lane">
-			<datalist id="lanes">
+			<select name="lane" id="lane">
 				<option value="">None</option>
  				<option value="Bottom">Bottom</option>
 				<option value="Jungle">Jungle</option>
 				<option value="Middle">Middle</option>
 				<option value="Top">Top</option>
-			</datalist>
+			</select>
 
 		</div>
 		<div class="small-3 columns">
 			<label for="champion" style="color: #72E7FF">Champion</label>
-			<input list="champions" name="champion" id="champion">
-			<datalist id="champions">
+			<select name="champion" id="champion">
 			  <option value="">None</option>
 			  <option value="Aatrox">Aatrox</option>
 			  <option value="Ahri">Ahri</option>
@@ -277,7 +274,7 @@
 			  <option value="Ziggs">Ziggs</option>
 			  <option value="Zilean">Zilean</option>
 			  <option value="Zyra">Zyra</option>
-			</datalist>
+			</select>
 		</div>
 		<div class="small-3 columns">
 			<input type="submit" value="Search" class="small radius button" style="font-weight: bold; color:black; background-color: #72E7FF; width: 100%">
@@ -287,7 +284,7 @@
 </form>
 
 <div class="container">
-	<table class="itemTable" id="table">
+	<table class="itemTable sorttable" id="table">
 		<thead>
 			<tr>
 				<th>Champion</th>
@@ -302,7 +299,7 @@
 				<th>5.14 Normal Win Rate</th>
 			</tr>
 		</thead>
-		<tbody id="tableBody striped" role="grid">
+		<tbody id="tableBody" role="grid">
 	
 		</tbody>
 	</table>

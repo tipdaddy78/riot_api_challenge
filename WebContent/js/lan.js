@@ -15,6 +15,7 @@ window.onload = function(){
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false,
         scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
 
+    /* If the form was submitted, this function allows us to get the arguments */
     var QueryString = function () {
       // This function is anonymous, is executed immediately and 
       // the return value is assigned to QueryString!
@@ -37,7 +38,10 @@ window.onload = function(){
       } 
         return query_string;
     }();
-    alert(QueryString.champion);
+    var selChampion = QueryString.champion;
+    var selItem = parseInt(QueryString.item);
+    var selLane = QueryString.lane;
+
 
     /*Load JSON file and fill arrays with data*/
     request = new XMLHttpRequest();
@@ -59,7 +63,88 @@ window.onload = function(){
             normalWinData511[i] = ((data.patches[1].queues[1].regions[5].items[i].stats[4].win_rate)*100).toFixed(2);
             normalWinData514[i] = ((data.patches[0].queues[1].regions[5].items[i].stats[4].win_rate)*100).toFixed(2);
         }
+        var table = document.getElementById("tableBody");
+        var champName;
+        var champLane;
+        var rankedChampPick511;
+        var rankedChampPick514;
+        var rankedChampWin511;
+        var rankedChampWin514;
+        var normalChampPick511;
+        var normalChampPick514;
+        var normalChampWin511;
+        var normalChampWin514;
 
+        if(selLane == "" && selChampion != "") {// Lane IS specified, Champion not specified
+
+        } else if (selLane != "" && selChampion == "") { // Lane not specified, Champion IS specified
+
+        } else if (selLane != "" && selChampion != "") {
+
+        } else {// Neither lane, nor champion specified
+            var index = 9;
+            for(i = 0; i < 126; i++) {
+                champName = data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion;
+                champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[index].lane; 
+                rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+
+                var newRow   = tableRef.insertRow(tableRef.rows.length);
+
+                // Insert a cell in the row at index 0
+                var newCell  = newRow.insertCell(0);
+                // Append a text node to the cell
+                var data  = document.createElement('img');
+                data.src = 'http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/' + champName + '.png';
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(1);
+                data = document.createTextNode(champLane);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(2);
+                data = document.createTextNode(rankedChampPick511);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(3);
+                data = document.createTextNode(rankedChampPick514);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(4);
+                data = document.createTextNode(rankedChampWin511);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(5);
+                data = document.createTextNode(rankedChampWin514);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(6);
+                data = document.createTextNode(normalChampPick511);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(7);
+                data = document.createTextNode(normalChampPick514);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(8);
+                data = document.createTextNode(normalChampWin511);
+                newCell.appendChild(data);
+
+                newCell = newRow.insertCell(9);
+                data = document.createTextNode(normalChampWin514);
+                newCell.appendChild(data);
+
+                index += 5;
+            }
+        }
+
+        /* Set up pick/win rate graphs */
         var rankedPick = {labels: items,
             datasets: [
                 {
