@@ -74,5 +74,7 @@
 .itemTable{
   margin-right: auto;
   margin-left: auto;
+}
+.itemTable tbody tr td {
   text-align: right;
 }
