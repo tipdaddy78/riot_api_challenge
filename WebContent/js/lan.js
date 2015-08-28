@@ -137,9 +137,9 @@ window.onload = function(){
                         var skin1 = document.createElement('img');
                         skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
                         skinBox.appendChild(skin1);
-
+                        break;
                     }
-                    break;
+                    
                 } else {
                     index += 5;
                 }
