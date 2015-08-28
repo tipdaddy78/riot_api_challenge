@@ -292,6 +292,7 @@ window.onload = function(){
                     } else {
                         index += 5;
                     }
+                }
             }
         } else {// Neither lane, nor champion specified
             var index = 9;
