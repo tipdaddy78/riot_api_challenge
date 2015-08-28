@@ -14,7 +14,7 @@ window.onload = function(){
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
 
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
-        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%"};
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
 
 
     /*Load JSON file and fill arrays with data*/
