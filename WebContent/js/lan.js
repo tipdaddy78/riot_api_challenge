@@ -214,7 +214,7 @@ window.onload = function(){
                 index += 5;
             }
         } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
-            if (selItem == null){ // On initial load it will go into this block so stop it from trying to generate a graph.
+            if (selItem == NaN){ // On initial load it will go into this block so stop it from trying to generate a graph.
                 
             } else {
                 var index = 5;
