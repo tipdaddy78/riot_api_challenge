@@ -1,7 +1,3 @@
-body{
-  font-family: Verdana, sans-serif;
-}
-
 .map{
 	width: 1024px;	
 }
@@ -58,6 +54,7 @@ body{
 .body {
   padding-top: 50px;
   background:#fff url(../images/background.jpg);
+  font-family: Verdana, sans-serif;
 }
 
 .chart-legend li span {
