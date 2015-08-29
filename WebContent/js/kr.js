@@ -65,8 +65,8 @@ window.onload = function(){
         var selItem = parseInt(QueryString.item);
         var selLane = QueryString.lane;
 
-        var fullTable = document.getElementById("table");
-        fullTable.caption = "Selected Filters: " + items[selItem] + ", " + selLane + ", and " + selChampion; 
+        var fullTable = document.getElementById("table").createCaption();
+        fullTable.innerHTML = "Selected Filters: " + items[selItem] + ", " + selLane + ", and " + selChampion; 
 
         if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
             var skinBox = document.getElementById("skins");
