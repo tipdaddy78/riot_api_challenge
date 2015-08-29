@@ -79,7 +79,7 @@
   text-align: right;
 }
 /* Sortable tables */
-.sortable thead {
+.itemTable thead {
     background-color:#eee;
     color:#666666;
     font-weight: bold;
