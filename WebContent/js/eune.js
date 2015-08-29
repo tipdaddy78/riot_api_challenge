@@ -64,45 +64,6 @@ window.onload = function(){
         var selItem = parseInt(QueryString.item);
         var selLane = QueryString.lane;
 
-        var tableDiv = document.getElementById('itemTable');
-        var table = document.createElement('table');
-        table.className = "itemTable sortable";
-        table.id = 'table';
-        var header = document.createElement('thead');
-        var tr = document.createElement('tr');
-        var th1 = document.createElement('th');
-        th2.innerHTML = "Champion";
-        tr.appendChild(th1);
-        var th2 = document.createElement('th');
-        th2.innerHTML = "Lane";
-        tr.appendChild(th2);
-        var th3 = document.createElement('th');
-        th3.innerHTML = "5.11 Ranked Pick Rate (%)";
-        tr.appendChild(th3);
-        var th4 = document.createElement('th');
-        th4.innerHTML = "5.14 Ranked Pick Rate (%)";
-        tr.appendChild(th4);
-        var th5 = document.createElement('th');
-        th5.innerHTML = "5.11 Normal Pick Rate (%)";
-        tr.appendChild(th5);
-         var th6 = document.createElement('th');
-        th6.innerHTML = "5.14 Normal Pick Rate (%)";
-        tr.appendChild(th6);
-        var th7 = document.createElement('th');
-        th7.innerHTML = "5.11 Ranked Win Rate (%)";
-        tr.appendChild(th7);
-        var th8 = document.createElement('th');
-        th8.innerHTML = "5.14 Ranked Win Rate (%)";
-        tr.appendChild(th8);
-        var th9 = document.createElement('th');
-        th9.innerHTML = "5.11 Normal Win Rate (%)";
-        tr.appendChild(th9);
-         var th10 = document.createElement('th');
-        th10.innerHTML = "5.14 Normal Win Rate (%)";
-        tr.appendChild(th10);
-        header.appendChild(tr);
-        table.appendChild(header);
-
         if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
             var skinBox = document.getElementById("skins");
 
@@ -121,8 +82,7 @@ window.onload = function(){
                         normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
                         normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
 
-                        var tableBody = document.createElement('tbody');
-                        var newRow   = tableBody.insertRow(tableBody.rows.length);
+                        var newRow   = table.insertRow(table.rows.length);
 
                         // Insert a cell in the row at index 0
                         var newCell  = newRow.insertCell(0);
@@ -173,9 +133,8 @@ window.onload = function(){
                 break;  
                 } else {
                     index += 5;
-                }         
+                }
             }
-            table.appendChild(tableBody);
         } else if (selLane != "" && selChampion == "") { // Lane IS specified, Champion not specified
             switch(selLane){
                 case "Bottom":
@@ -202,8 +161,7 @@ window.onload = function(){
                 normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
-                var tableBody = document.createElement('tbody');
-                var newRow   = tableBody.insertRow(tableBody.rows.length);
+                var newRow   = table.insertRow(table.rows.length);
 
                 // Insert a cell in the row at index 0
                 var newCell  = newRow.insertCell(0);
@@ -250,7 +208,6 @@ window.onload = function(){
 
                 index += 5;
             }
-            table.appendChild(tableBody);
         } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
             var skinBox = document.getElementById("skins");
             if (isNaN(selItem)){ // On initial load it will go into this block so stop it from trying to generate a graph.
@@ -283,8 +240,7 @@ window.onload = function(){
                         normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
                         normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
-                        var tableBody = document.createElement('tbody');
-                        var newRow   = tableBody.insertRow(tableBody.rows.length);
+                        var newRow   = table.insertRow(table.rows.length);
 
                         // Insert a cell in the row at index 0
                         var newCell  = newRow.insertCell(0);
@@ -339,7 +295,6 @@ window.onload = function(){
                     }
                 }
             }
-            table.appendChild(tableBody);
         } else {// Neither lane, nor champion specified
             var index = 9;
             for(i = 0; i < 126; i++) {
@@ -354,8 +309,7 @@ window.onload = function(){
                 normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
-                var tableBody = document.createElement('tbody');
-                var newRow   = tableBody.insertRow(tableBody.rows.length);
+                var newRow   = table.insertRow(table.rows.length);
 
                 // Insert a cell in the row at index 0
                 var newCell  = newRow.insertCell(0);
@@ -402,8 +356,8 @@ window.onload = function(){
 
                 index += 5;
             }
-            table.appendChild(tableBody);
         }
+        
         tableDiv.appendChild(table);
         sorttable.makeSortable(table);
         
