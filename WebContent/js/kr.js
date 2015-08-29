@@ -160,7 +160,7 @@ window.onload = function(){
                 case "Jungle":
                     var index = 6;
                     break;
-                case "Mid":
+                case "Middle":
                     var index = 7;
                     break;
                 default: 

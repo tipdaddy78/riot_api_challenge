@@ -252,7 +252,7 @@ window.onload = function(){
                             case "Jungle":
                                 index += 1;
                                 break;
-                            case "Mid":
+                            case "Middle":
                                 index += 2;
                                 break;
                             default: 
