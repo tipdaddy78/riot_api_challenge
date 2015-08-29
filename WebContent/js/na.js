@@ -351,16 +351,16 @@ window.onload = function(){
                 normalChampWin511 = ((data.patches[1].queues[1].regions[1].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[1].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
-                if (rankedChampPick511 == 0.00){
+                if (rankedChampPick511 == 0){
                             rankedChampWin511 == 0.00;
                         }
-                        if (rankedChampPick514 == 0.00){
+                        if (rankedChampPick514 == 0){
                             rankedChampWin514 == 0.00;
                         }
-                        if (normalChampPick511 == 0.00){
+                        if (normalChampPick511 == 0){
                             normalChampWin511 == 0.00;
                         }
-                        if (normalChampPick514 == 0.00){
+                        if (normalChampPick514 == 0){
                             normalChampWin514 == 0.00;
                         }
 
