@@ -357,9 +357,6 @@ window.onload = function(){
                 index += 5;
             }
         }
-
-        var newTable = document.getElementById("table");
-        sorttable.makeSortable(newTable);
         
          var rankedPick = {labels: items,
             datasets: [
@@ -460,6 +457,9 @@ window.onload = function(){
         
         document.getElementById('js-legend').innerHTML = myBar.generateLegend();
         document.getElementById('js-legend2').innerHTML = myBar.generateLegend(); 
+
+        var newTable = document.getElementById("table");
+        sorttable.makeSortable(newTable);
       } else {
         // We reached our target server, but it returned an error
         alert("Failed to parse JSON. Please try again.");
