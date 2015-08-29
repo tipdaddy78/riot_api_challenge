@@ -86,6 +86,19 @@ window.onload = function(){
                         normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
                         normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
 
+                        if (rankedChampPick511 == 0.00){
+                            rankedChampWin511 == 0.00;
+                        }
+                        if (rankedChampPick514 == 0.00){
+                            rankedChampWin514 == 0.00;
+                        }
+                        if (normalChampPick511 == 0.00){
+                            normalChampWin511 == 0.00;
+                        }
+                        if (normalChampPick514 == 0.00){
+                            normalChampWin514 == 0.00;
+                        }
+
                         var newRow   = table.insertRow(table.rows.length);
 
                         // Insert a cell in the row at index 0
@@ -164,6 +177,19 @@ window.onload = function(){
                 normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
                 normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+
+                if (rankedChampPick511 == 0.00){
+                            rankedChampWin511 == 0.00;
+                        }
+                        if (rankedChampPick514 == 0.00){
+                            rankedChampWin514 == 0.00;
+                        }
+                        if (normalChampPick511 == 0.00){
+                            normalChampWin511 == 0.00;
+                        }
+                        if (normalChampPick514 == 0.00){
+                            normalChampWin514 == 0.00;
+                        }
 
                 var newRow   = table.insertRow(table.rows.length);
 
@@ -244,6 +270,19 @@ window.onload = function(){
                         normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
                         normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
+                        if (rankedChampPick511 == 0.00){
+                            rankedChampWin511 == 0.00;
+                        }
+                        if (rankedChampPick514 == 0.00){
+                            rankedChampWin514 == 0.00;
+                        }
+                        if (normalChampPick511 == 0.00){
+                            normalChampWin511 == 0.00;
+                        }
+                        if (normalChampPick514 == 0.00){
+                            normalChampWin514 == 0.00;
+                        }
+
                         var newRow   = table.insertRow(table.rows.length);
 
                         // Insert a cell in the row at index 0
@@ -312,6 +351,19 @@ window.onload = function(){
                 normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
                 normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
                 normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+
+                if (rankedChampPick511 == 0.00){
+                            rankedChampWin511 == 0.00;
+                        }
+                        if (rankedChampPick514 == 0.00){
+                            rankedChampWin514 == 0.00;
+                        }
+                        if (normalChampPick511 == 0.00){
+                            normalChampWin511 == 0.00;
+                        }
+                        if (normalChampPick514 == 0.00){
+                            normalChampWin514 == 0.00;
+                        }
 
                 var newRow   = table.insertRow(table.rows.length);
 
