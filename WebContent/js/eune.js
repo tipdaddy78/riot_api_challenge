@@ -358,7 +358,7 @@ window.onload = function(){
             }
         }
 
-        var newTable = document.getElementById("itemTable");
+        var newTable = document.getElementById("table");
         sorttable.makeSortable(newTable);
         
          var rankedPick = {labels: items,

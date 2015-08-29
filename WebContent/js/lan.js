@@ -366,7 +366,7 @@ window.onload = function(){
             }
         }
 
-        var newTable = document.getElementById("itemTable");
+        var newTable = document.getElementById("table");
         sorttable.makeSortable(newTable);
 
         /* Set up pick/win rate graphs */
