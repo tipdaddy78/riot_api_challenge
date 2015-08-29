@@ -72,18 +72,18 @@ window.onload = function(){
 
             var index = 5;
             for(i = 0; i < 126; i++) {
-                if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
+                if (selChampion == data.patches[0].queues[0].regions[3].items[selItem].stats[index].champion){
                     for(j = index; j < (index+4); j++){
-                        champName = data.patches[0].queues[0].regions[5].items[selItem].stats[j].champion;
-                        champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[j].lane; 
-                        rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
-                        rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
-                        rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
-                        rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
-                        normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
-                        normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[j].pick_rate)*100).toFixed(2);
-                        normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
-                        normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        champName = data.patches[0].queues[0].regions[3].items[selItem].stats[j].champion;
+                        champLane = data.patches[0].queues[0].regions[3].items[selItem].stats[j].lane; 
+                        rankedChampPick511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampPick514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampWin511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        rankedChampWin514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampPick511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampPick514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampWin511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampWin514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[j].win_rate)*100).toFixed(2);
 
                         var newRow   = table.insertRow(table.rows.length);
 
@@ -153,16 +153,16 @@ window.onload = function(){
                     var index = 5;
             }
             for(i = 0; i < 126; i++) {
-                champName = data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion;
-                champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[index].lane; 
-                rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                champName = data.patches[0].queues[0].regions[3].items[selItem].stats[index].champion;
+                champLane = data.patches[0].queues[0].regions[3].items[selItem].stats[index].lane; 
+                rankedChampPick511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampPick514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampWin511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                rankedChampWin514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampPick511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampPick514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampWin511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampWin514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                 var newRow   = table.insertRow(table.rows.length);
 
@@ -218,7 +218,7 @@ window.onload = function(){
             } else {
                 var index = 5;
                 for(i = 0; i < 126; i++) {
-                    if (selChampion == data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion){
+                    if (selChampion == data.patches[0].queues[0].regions[3].items[selItem].stats[index].champion){
                         switch(selLane){
                             case "Bottom":
                                 index += 3;
@@ -232,16 +232,16 @@ window.onload = function(){
                             default: 
                                 index += 0;
                         }
-                        champName = data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion;
-                        champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[index].lane; 
-                        rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                        normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                        normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        champName = data.patches[0].queues[0].regions[3].items[selItem].stats[index].champion;
+                        champLane = data.patches[0].queues[0].regions[3].items[selItem].stats[index].lane; 
+                        rankedChampPick511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        rankedChampPick514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        rankedChampWin511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        rankedChampWin514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        normalChampPick511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        normalChampPick514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        normalChampWin511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        normalChampWin514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                         var newRow   = table.insertRow(table.rows.length);
 
@@ -301,16 +301,16 @@ window.onload = function(){
         } else {// Neither lane, nor champion specified
             var index = 9;
             for(i = 0; i < 126; i++) {
-                champName = data.patches[0].queues[0].regions[5].items[selItem].stats[index].champion;
-                champLane = data.patches[0].queues[0].regions[5].items[selItem].stats[index].lane; 
-                rankedChampPick511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampPick514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampWin511 = ((data.patches[1].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                rankedChampWin514 = ((data.patches[0].queues[0].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampPick511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampPick514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampWin511 = ((data.patches[1].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampWin514 = ((data.patches[0].queues[1].regions[5].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                champName = data.patches[0].queues[0].regions[3].items[selItem].stats[index].champion;
+                champLane = data.patches[0].queues[0].regions[3].items[selItem].stats[index].lane; 
+                rankedChampPick511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampPick514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampWin511 = ((data.patches[1].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                rankedChampWin514 = ((data.patches[0].queues[0].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampPick511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampPick514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampWin511 = ((data.patches[1].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampWin514 = ((data.patches[0].queues[1].regions[3].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                 var newRow   = table.insertRow(table.rows.length);
 
