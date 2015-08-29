@@ -86,3 +86,7 @@
     font-weight: bold;
     cursor: default;
 }
+
+.itemTable thead tr th {
+    width: 10%;
+}
