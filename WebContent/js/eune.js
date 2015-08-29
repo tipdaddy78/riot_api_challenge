@@ -404,6 +404,8 @@ window.onload = function(){
             }
             table.appendChild(tableBody);
         }
+        tableDiv.appendChild(table);
+        sorttable.makeSortable(table);
         
          var rankedPick = {labels: items,
             datasets: [
@@ -505,8 +507,7 @@ window.onload = function(){
         document.getElementById('js-legend').innerHTML = myBar.generateLegend();
         document.getElementById('js-legend2').innerHTML = myBar.generateLegend(); 
 
-
-        sorttable.makeSortable(newTable);
+        
       } else {
         // We reached our target server, but it returned an error
         alert("Failed to parse JSON. Please try again.");
