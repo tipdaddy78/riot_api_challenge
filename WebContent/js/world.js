@@ -59,6 +59,8 @@ window.onload = function(){
     var queues = ["Ranked", "Normal"];
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
         scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
+    var options2 = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%"};
 
 
     /*Load JSON file and fill arrays with data*/
@@ -496,9 +498,9 @@ window.onload = function(){
         };
 
         var ctx = document.getElementById("canvas").getContext("2d");
-            window.myBar = new Chart(ctx).Bar(pick511, options);
+            window.myBar = new Chart(ctx).Bar(pick511, options2);
         var ctx2 = document.getElementById("canvas2").getContext("2d");
-            window.myBar2 = new Chart(ctx2).Bar(pick514, options);
+            window.myBar2 = new Chart(ctx2).Bar(pick514, options2);
         var ctx3 = document.getElementById("canvas3").getContext("2d");
             window.myBar3 = new Chart(ctx3).Bar(win511, options);
         var ctx4 = document.getElementById("canvas4").getContext("2d");
