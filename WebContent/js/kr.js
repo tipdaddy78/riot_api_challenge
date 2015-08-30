@@ -8,7 +8,7 @@ window.onload = function(){
     var normalPickData514 = [];
     var normalWinData511 = [];
     var normalWinData514 = [];
-    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Magus/Runeglaive",
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Magus (5.11)/Runeglaive (5.14)",
     "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
@@ -65,7 +65,7 @@ window.onload = function(){
         var selItem = parseInt(QueryString.item);
         var selLane = QueryString.lane;
 
-        var fullTable = document.getElementById("table").createCaption();
+        var fullTable = document.getElementById("filters");
         fullTable.innerHTML = "Selected Filters: " + items[selItem] + ", " + selLane + ", and " + selChampion; 
 
         if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
