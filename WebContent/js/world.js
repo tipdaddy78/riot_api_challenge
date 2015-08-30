@@ -88,7 +88,7 @@ window.onload = function(){
           } 
             return query_string;
         }();
-        var selQueue = QueryString.queue;
+        var selQueue = parseInt(QueryString.queue);
         var selItem = parseInt(QueryString.item);
         var selLane = parseInt(QueryString.lane);
 
