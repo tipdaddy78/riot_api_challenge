@@ -51,6 +51,10 @@ window.onload = function(){
     var lasWinRates514 = [];
 
     var regions = ["Brazil", "North America", "Korea", "Oceania", "EU Nordic & East", "Latin America North", "Turkey", "EU West", "Russia", "Latin America South"];
+    var items = ["Needlessly Large Rod", "Athene's Unholy Grail", "Blasting Wand", "Magus/Runeglaive",
+    "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
+    "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
+     "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
         scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
 
