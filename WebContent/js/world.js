@@ -60,7 +60,7 @@ window.onload = function(){
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
         scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>%", scaleBeginAtZero: false};
     var options2 = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
-        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>%"};
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%if (label){%><%=datasets.label%>: <%}%><%= value %>%"};
 
 
     /*Load JSON file and fill arrays with data*/
