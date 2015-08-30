@@ -95,53 +95,53 @@ window.onload = function(){
         if(isNaN(selItem)){
         } else {
             brPickRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            brPickRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            brWinRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            brPickRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            brWinRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             brWinRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             naPickRates511[0] = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            naPickRates514[0] = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            naWinRates511[0] = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            naPickRates514[0] = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            naWinRates511[0] = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             naWinRates514[0] = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             krPickRates511[0] = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            krPickRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            krWinRates511[0] = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            krPickRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            krWinRates511[0] = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             krWinRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             ocePickRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             ocePickRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            oceWinRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            oceWinRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             oceWinRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             eunePickRates511[0] = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            eunePickRates514[0] = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            euneWinRates511[0] = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            eunePickRates514[0] = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euneWinRates511[0] = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             euneWinRates514[0] = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             lanPickRates511[0] = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lanPickRates514[0] = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            lanWinRates511[0] = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lanPickRates514[0] = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lanWinRates511[0] = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             lanWinRates514[0] = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             trPickRates511[0] = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            trPickRates514[0] = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            trWinRates511[0] = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            trPickRates514[0] = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            trWinRates511[0] = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             trWinRates514[0] = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             euwPickRates511[0] = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            euwPickRates514[0] = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            euwWinRates511[0] = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euwPickRates514[0] = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euwWinRates511[0] = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             euwWinRates514[0] = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             ruPickRates511[0] = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            ruPickRates514[0] = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            ruWinRates511[0] = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            ruPickRates514[0] = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            ruWinRates511[0] = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             ruWinRates514[0] = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             lasPickRates511[0] = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lasPickRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            lasWinRates511[0] = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lasPickRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lasWinRates511[0] = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             lasWinRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
         }
         
@@ -156,13 +156,21 @@ window.onload = function(){
                     data: brPickRates511
                 },
                 {
-                    label: "North America",
-                    fillColor: "rgba(182,231,83,0.5)",
-                    strokeColor: "rgba(182,231,83,0.8)",
-                    highlightFill: "rgba(182,231,83,0.75)",
-                    highlightStroke: "rgba(182,231,83,1)",
-                    data: naPickRates511
+                    label: "EU Nordic & East",
+                    fillColor: "rgba(253,119,3,0.5)",
+                    strokeColor: "rgba(253,119,3,0.8)",
+                    highlightFill: "rgba(253,119,3,0.75)",
+                    highlightStroke: "rgba(253,119,3,1)",
+                    data: eunePickRates511
                 },
+                {
+                    label: "EU West",
+                    fillColor: "rgba(194,230,250,0.5)",
+                    strokeColor: "rgba(194,230,250,0.8)",
+                    highlightFill: "rgba(194,230,250,0.75)",
+                    highlightStroke: "rgba(194,230,250,1)",
+                    data: euwPickRates511
+                },                
                 {
                     label: "Korea",
                     fillColor: "rgba(140,230,148,0.5)",
@@ -170,22 +178,6 @@ window.onload = function(){
                     highlightFill: "rgba(140,230,148,0.75)",
                     highlightStroke: "rgba(140,230,148,1)",
                     data: krPickRates511
-                },
-                {
-                    label: "Oceania",
-                    fillColor: "rgba(197,116,60,0.5)",
-                    strokeColor: "rgba(197,116,60,0.8)",
-                    highlightFill: "rgba(197,116,60,0.75)",
-                    highlightStroke: "rgba(197,116,60,1)",
-                    data: ocePickRates511
-                },
-                {
-                    label: "EU Nordic & East",
-                    fillColor: "rgba(253,119,3,0.5)",
-                    strokeColor: "rgba(253,119,3,0.8)",
-                    highlightFill: "rgba(253,119,3,0.75)",
-                    highlightStroke: "rgba(253,119,3,1)",
-                    data: eunePickRates511
                 },
                 {
                     label: "Latin America North",
@@ -196,21 +188,29 @@ window.onload = function(){
                     data: lanPickRates511
                 },
                 {
-                    label: "Turkey",
-                    fillColor: "rgba(204,86,47,0.5)",
-                    strokeColor: "rgba(204,86,47,0.8)",
-                    highlightFill: "rgba(204,86,47,0.75)",
-                    highlightStroke: "rgba(204,86,47,1)",
-                    data: trPickRates511
+                    label: "Latin America South",
+                    fillColor: "rgba(161,175,214,0.5)",
+                    strokeColor: "rgba(161,175,214,0.8)",
+                    highlightFill: "rgba(161,175,214,0.75)",
+                    highlightStroke: "rgba(161,175,214,1)",
+                    data: lasPickRates511
                 },
                 {
-                    label: "EU West",
-                    fillColor: "rgba(194,230,250,0.5)",
-                    strokeColor: "rgba(194,230,250,0.8)",
-                    highlightFill: "rgba(194,230,250,0.75)",
-                    highlightStroke: "rgba(194,230,250,1)",
-                    data: euwPickRates511
+                    label: "North America",
+                    fillColor: "rgba(182,231,83,0.5)",
+                    strokeColor: "rgba(182,231,83,0.8)",
+                    highlightFill: "rgba(182,231,83,0.75)",
+                    highlightStroke: "rgba(182,231,83,1)",
+                    data: naPickRates511
                 },
+                {
+                    label: "Oceania",
+                    fillColor: "rgba(197,116,60,0.5)",
+                    strokeColor: "rgba(197,116,60,0.8)",
+                    highlightFill: "rgba(197,116,60,0.75)",
+                    highlightStroke: "rgba(197,116,60,1)",
+                    data: ocePickRates511
+                },                
                 {
                     label: "Russia",
                     fillColor: "rgba(249,98,90,0.5)",
@@ -220,12 +220,12 @@ window.onload = function(){
                     data: ruPickRates511
                 },
                 {
-                    label: "Latin America South",
-                    fillColor: "rgba(161,175,214,0.5)",
-                    strokeColor: "rgba(161,175,214,0.8)",
-                    highlightFill: "rgba(161,175,214,0.75)",
-                    highlightStroke: "rgba(161,175,214,1)",
-                    data: lasPickRates511
+                    label: "Turkey",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: trPickRates511
                 }
             ]
         };
@@ -241,13 +241,21 @@ window.onload = function(){
                     data: brPickRates514
                 },
                 {
-                    label: "North America",
-                    fillColor: "rgba(182,231,83,0.5)",
-                    strokeColor: "rgba(182,231,83,0.8)",
-                    highlightFill: "rgba(182,231,83,0.75)",
-                    highlightStroke: "rgba(182,231,83,1)",
-                    data: naPickRates514
+                    label: "EU Nordic & East",
+                    fillColor: "rgba(253,119,3,0.5)",
+                    strokeColor: "rgba(253,119,3,0.8)",
+                    highlightFill: "rgba(253,119,3,0.75)",
+                    highlightStroke: "rgba(253,119,3,1)",
+                    data: eunePickRates514
                 },
+                {
+                    label: "EU West",
+                    fillColor: "rgba(194,230,250,0.5)",
+                    strokeColor: "rgba(194,230,250,0.8)",
+                    highlightFill: "rgba(194,230,250,0.75)",
+                    highlightStroke: "rgba(194,230,250,1)",
+                    data: euwPickRates514
+                },                
                 {
                     label: "Korea",
                     fillColor: "rgba(140,230,148,0.5)",
@@ -255,22 +263,6 @@ window.onload = function(){
                     highlightFill: "rgba(140,230,148,0.75)",
                     highlightStroke: "rgba(140,230,148,1)",
                     data: krPickRates514
-                },
-                {
-                    label: "Oceania",
-                    fillColor: "rgba(197,116,60,0.5)",
-                    strokeColor: "rgba(197,116,60,0.8)",
-                    highlightFill: "rgba(197,116,60,0.75)",
-                    highlightStroke: "rgba(197,116,60,1)",
-                    data: ocePickRates514
-                },
-                {
-                    label: "EU Nordic & East",
-                    fillColor: "rgba(253,119,3,0.5)",
-                    strokeColor: "rgba(253,119,3,0.8)",
-                    highlightFill: "rgba(253,119,3,0.75)",
-                    highlightStroke: "rgba(253,119,3,1)",
-                    data: eunePickRates514
                 },
                 {
                     label: "Latin America North",
@@ -281,21 +273,29 @@ window.onload = function(){
                     data: lanPickRates514
                 },
                 {
-                    label: "Turkey",
-                    fillColor: "rgba(204,86,47,0.5)",
-                    strokeColor: "rgba(204,86,47,0.8)",
-                    highlightFill: "rgba(204,86,47,0.75)",
-                    highlightStroke: "rgba(204,86,47,1)",
-                    data: trPickRates514
+                    label: "Latin America South",
+                    fillColor: "rgba(161,175,214,0.5)",
+                    strokeColor: "rgba(161,175,214,0.8)",
+                    highlightFill: "rgba(161,175,214,0.75)",
+                    highlightStroke: "rgba(161,175,214,1)",
+                    data: lasPickRates514
                 },
                 {
-                    label: "EU West",
-                    fillColor: "rgba(194,230,250,0.5)",
-                    strokeColor: "rgba(194,230,250,0.8)",
-                    highlightFill: "rgba(194,230,250,0.75)",
-                    highlightStroke: "rgba(194,230,250,1)",
-                    data: euwPickRates514
+                    label: "North America",
+                    fillColor: "rgba(182,231,83,0.5)",
+                    strokeColor: "rgba(182,231,83,0.8)",
+                    highlightFill: "rgba(182,231,83,0.75)",
+                    highlightStroke: "rgba(182,231,83,1)",
+                    data: naPickRates514
                 },
+                {
+                    label: "Oceania",
+                    fillColor: "rgba(197,116,60,0.5)",
+                    strokeColor: "rgba(197,116,60,0.8)",
+                    highlightFill: "rgba(197,116,60,0.75)",
+                    highlightStroke: "rgba(197,116,60,1)",
+                    data: ocePickRates514
+                },                
                 {
                     label: "Russia",
                     fillColor: "rgba(249,98,90,0.5)",
@@ -305,12 +305,12 @@ window.onload = function(){
                     data: ruPickRates514
                 },
                 {
-                    label: "Latin America South",
-                    fillColor: "rgba(161,175,214,0.5)",
-                    strokeColor: "rgba(161,175,214,0.8)",
-                    highlightFill: "rgba(161,175,214,0.75)",
-                    highlightStroke: "rgba(161,175,214,1)",
-                    data: lasPickRates514
+                    label: "Turkey",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: trPickRates514
                 }
             ]
         };
@@ -326,13 +326,21 @@ window.onload = function(){
                     data: brWinRates511
                 },
                 {
-                    label: "North America",
-                    fillColor: "rgba(182,231,83,0.5)",
-                    strokeColor: "rgba(182,231,83,0.8)",
-                    highlightFill: "rgba(182,231,83,0.75)",
-                    highlightStroke: "rgba(182,231,83,1)",
-                    data: naWinRates511
+                    label: "EU Nordic & East",
+                    fillColor: "rgba(253,119,3,0.5)",
+                    strokeColor: "rgba(253,119,3,0.8)",
+                    highlightFill: "rgba(253,119,3,0.75)",
+                    highlightStroke: "rgba(253,119,3,1)",
+                    data: euneWinRates511
                 },
+                {
+                    label: "EU West",
+                    fillColor: "rgba(194,230,250,0.5)",
+                    strokeColor: "rgba(194,230,250,0.8)",
+                    highlightFill: "rgba(194,230,250,0.75)",
+                    highlightStroke: "rgba(194,230,250,1)",
+                    data: euwWinRates511
+                },                
                 {
                     label: "Korea",
                     fillColor: "rgba(140,230,148,0.5)",
@@ -340,22 +348,6 @@ window.onload = function(){
                     highlightFill: "rgba(140,230,148,0.75)",
                     highlightStroke: "rgba(140,230,148,1)",
                     data: krWinRates511
-                },
-                {
-                    label: "Oceania",
-                    fillColor: "rgba(197,116,60,0.5)",
-                    strokeColor: "rgba(197,116,60,0.8)",
-                    highlightFill: "rgba(197,116,60,0.75)",
-                    highlightStroke: "rgba(197,116,60,1)",
-                    data: oceWinRates511
-                },
-                {
-                    label: "EU Nordic & East",
-                    fillColor: "rgba(253,119,3,0.5)",
-                    strokeColor: "rgba(253,119,3,0.8)",
-                    highlightFill: "rgba(253,119,3,0.75)",
-                    highlightStroke: "rgba(253,119,3,1)",
-                    data: euneWinRates511
                 },
                 {
                     label: "Latin America North",
@@ -366,21 +358,29 @@ window.onload = function(){
                     data: lanWinRates511
                 },
                 {
-                    label: "Turkey",
-                    fillColor: "rgba(204,86,47,0.5)",
-                    strokeColor: "rgba(204,86,47,0.8)",
-                    highlightFill: "rgba(204,86,47,0.75)",
-                    highlightStroke: "rgba(204,86,47,1)",
-                    data: trWinRates511
+                    label: "Latin America South",
+                    fillColor: "rgba(161,175,214,0.5)",
+                    strokeColor: "rgba(161,175,214,0.8)",
+                    highlightFill: "rgba(161,175,214,0.75)",
+                    highlightStroke: "rgba(161,175,214,1)",
+                    data: lasWinRates511
                 },
                 {
-                    label: "EU West",
-                    fillColor: "rgba(194,230,250,0.5)",
-                    strokeColor: "rgba(194,230,250,0.8)",
-                    highlightFill: "rgba(194,230,250,0.75)",
-                    highlightStroke: "rgba(194,230,250,1)",
-                    data: euwWinRates511
+                    label: "North America",
+                    fillColor: "rgba(182,231,83,0.5)",
+                    strokeColor: "rgba(182,231,83,0.8)",
+                    highlightFill: "rgba(182,231,83,0.75)",
+                    highlightStroke: "rgba(182,231,83,1)",
+                    data: naWinRates511
                 },
+                {
+                    label: "Oceania",
+                    fillColor: "rgba(197,116,60,0.5)",
+                    strokeColor: "rgba(197,116,60,0.8)",
+                    highlightFill: "rgba(197,116,60,0.75)",
+                    highlightStroke: "rgba(197,116,60,1)",
+                    data: oceWinRates511
+                },                
                 {
                     label: "Russia",
                     fillColor: "rgba(249,98,90,0.5)",
@@ -390,12 +390,12 @@ window.onload = function(){
                     data: ruWinRates511
                 },
                 {
-                    label: "Latin America South",
-                    fillColor: "rgba(161,175,214,0.5)",
-                    strokeColor: "rgba(161,175,214,0.8)",
-                    highlightFill: "rgba(161,175,214,0.75)",
-                    highlightStroke: "rgba(161,175,214,1)",
-                    data: lasWinRates511
+                    label: "Turkey",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: trWinRates511
                 }
             ]
         };
@@ -411,13 +411,21 @@ window.onload = function(){
                     data: brWinRates514
                 },
                 {
-                    label: "North America",
-                    fillColor: "rgba(182,231,83,0.5)",
-                    strokeColor: "rgba(182,231,83,0.8)",
-                    highlightFill: "rgba(182,231,83,0.75)",
-                    highlightStroke: "rgba(182,231,83,1)",
-                    data: naWinRates514
+                    label: "EU Nordic & East",
+                    fillColor: "rgba(253,119,3,0.5)",
+                    strokeColor: "rgba(253,119,3,0.8)",
+                    highlightFill: "rgba(253,119,3,0.75)",
+                    highlightStroke: "rgba(253,119,3,1)",
+                    data: euneWinRates514
                 },
+                {
+                    label: "EU West",
+                    fillColor: "rgba(194,230,250,0.5)",
+                    strokeColor: "rgba(194,230,250,0.8)",
+                    highlightFill: "rgba(194,230,250,0.75)",
+                    highlightStroke: "rgba(194,230,250,1)",
+                    data: euwWinRates514
+                },                
                 {
                     label: "Korea",
                     fillColor: "rgba(140,230,148,0.5)",
@@ -425,22 +433,6 @@ window.onload = function(){
                     highlightFill: "rgba(140,230,148,0.75)",
                     highlightStroke: "rgba(140,230,148,1)",
                     data: krWinRates514
-                },
-                {
-                    label: "Oceania",
-                    fillColor: "rgba(197,116,60,0.5)",
-                    strokeColor: "rgba(197,116,60,0.8)",
-                    highlightFill: "rgba(197,116,60,0.75)",
-                    highlightStroke: "rgba(197,116,60,1)",                    
-                    data: oceWinRates514
-                },
-                {
-                    label: "EU Nordic & East",
-                    fillColor: "rgba(253,119,3,0.5)",
-                    strokeColor: "rgba(253,119,3,0.8)",
-                    highlightFill: "rgba(253,119,3,0.75)",
-                    highlightStroke: "rgba(253,119,3,1)",
-                    data: euneWinRates514
                 },
                 {
                     label: "Latin America North",
@@ -451,21 +443,29 @@ window.onload = function(){
                     data: lanWinRates514
                 },
                 {
-                    label: "Turkey",
-                    fillColor: "rgba(204,86,47,0.5)",
-                    strokeColor: "rgba(204,86,47,0.8)",
-                    highlightFill: "rgba(204,86,47,0.75)",
-                    highlightStroke: "rgba(204,86,47,1)",
-                    data: trWinRates514
+                    label: "Latin America South",
+                    fillColor: "rgba(161,175,214,0.5)",
+                    strokeColor: "rgba(161,175,214,0.8)",
+                    highlightFill: "rgba(161,175,214,0.75)",
+                    highlightStroke: "rgba(161,175,214,1)",
+                    data: lasWinRates514
                 },
                 {
-                    label: "EU West",
-                    fillColor: "rgba(194,230,250,0.5)",
-                    strokeColor: "rgba(194,230,250,0.8)",
-                    highlightFill: "rgba(194,230,250,0.75)",
-                    highlightStroke: "rgba(194,230,250,1)",
-                    data: euwWinRates514
+                    label: "North America",
+                    fillColor: "rgba(182,231,83,0.5)",
+                    strokeColor: "rgba(182,231,83,0.8)",
+                    highlightFill: "rgba(182,231,83,0.75)",
+                    highlightStroke: "rgba(182,231,83,1)",
+                    data: naWinRates514
                 },
+                {
+                    label: "Oceania",
+                    fillColor: "rgba(197,116,60,0.5)",
+                    strokeColor: "rgba(197,116,60,0.8)",
+                    highlightFill: "rgba(197,116,60,0.75)",
+                    highlightStroke: "rgba(197,116,60,1)",
+                    data: oceWinRates514
+                },                
                 {
                     label: "Russia",
                     fillColor: "rgba(249,98,90,0.5)",
@@ -475,12 +475,12 @@ window.onload = function(){
                     data: ruWinRates514
                 },
                 {
-                    label: "Latin America South",
-                    fillColor: "rgba(161,175,214,0.5)",
-                    strokeColor: "rgba(161,175,214,0.8)",
-                    highlightFill: "rgba(161,175,214,0.75)",
-                    highlightStroke: "rgba(161,175,214,1)",
-                    data: lasWinRates514
+                    label: "Turkey",
+                    fillColor: "rgba(204,86,47,0.5)",
+                    strokeColor: "rgba(204,86,47,0.8)",
+                    highlightFill: "rgba(204,86,47,0.75)",
+                    highlightStroke: "rgba(204,86,47,1)",
+                    data: trWinRates514
                 }
             ]
         };
