@@ -58,9 +58,9 @@ window.onload = function(){
     var lanes = ["Top", "Jungle", "Middle", "Bottom", "No Lane"];
     var queues = ["Ranked", "Normal"];
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
-        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>%", scaleBeginAtZero: false};
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
     var options2 = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
-        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%if (label){%><%=datasets.label%>: <%}%><%= value %>%"};
+        scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%"};
 
 
     /*Load JSON file and fill arrays with data*/
