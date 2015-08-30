@@ -55,6 +55,8 @@ window.onload = function(){
     "Rabadon's Deathcap", "Luden's Echo", "Liandry's Torment", "Will of the Ancients", "Seraph's Embrace", 
     "Morellonomicon", "Void Staff", "Nashor's Tooth", "Rylai's Crystal Scepter", "Amplifying Tome",
      "Rod of Ages", "Archangel's Staff", "Zhonyas Hourglass"];
+    var lanes = ["Top", "Jungle", "Middle", "Bottom"];
+    var queues = ["Ranked", "Normal"];
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
         scaleShowVerticalLines: false, responsive: true, multiTooltipTemplate: "<%= value %>%", scaleBeginAtZero: false};
 
@@ -98,6 +100,8 @@ window.onload = function(){
 
         if(isNaN(selItem)){
         } else {
+            var filters = document.getElementById("filters");
+            filters.innerHTML = "Selected Filters: " + items[selItem] + ", " + queues[selQueue] +", and" + lanes[selLane]; 
             brPickRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             brPickRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             brWinRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
