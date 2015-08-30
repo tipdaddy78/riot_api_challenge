@@ -145,7 +145,7 @@ window.onload = function(){
             lasWinRates514 = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
         }
         
-        var pick511 = {labels: regions,
+        var pick511 = {labels: "",
             datasets: [
                 {
                     label: "Brazil",
@@ -230,7 +230,7 @@ window.onload = function(){
             ]
         };
 
-        var pick514 = {labels: regions,
+        var pick514 = {labels: "",
             datasets: [
                 {
                     label: "Brazil",
@@ -315,7 +315,7 @@ window.onload = function(){
             ]
         };
 
-        var win511 = {labels: regions,
+        var win511 = {labels: "",
             datasets: [
                 {
                     label: "Brazil",
@@ -400,7 +400,7 @@ window.onload = function(){
             ]
         };
 
-        var win514 = {labels: regions,
+        var win514 = {labels: "",
             datasets: [
                 {
                     label: "Brazil",
