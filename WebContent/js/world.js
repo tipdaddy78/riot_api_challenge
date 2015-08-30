@@ -145,7 +145,7 @@ window.onload = function(){
             lasWinRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
         }
         
-        var pick511 = {labels: "5.11 Pick Rates",
+        var pick511 = {labels: ["5.11 Pick Rates"],
             datasets: [
                 {
                     label: "Brazil",
@@ -230,7 +230,7 @@ window.onload = function(){
             ]
         };
 
-        var pick514 = {labels: "5.14 Pick Rates",
+        var pick514 = {labels: ["5.14 Pick Rates"],
             datasets: [
                 {
                     label: "Brazil",
@@ -315,7 +315,7 @@ window.onload = function(){
             ]
         };
 
-        var win511 = {labels: "5.11 Win Rates",
+        var win511 = {labels: ["5.11 Win Rates"],
             datasets: [
                 {
                     label: "Brazil",
@@ -400,7 +400,7 @@ window.onload = function(){
             ]
         };
 
-        var win514 = {labels: "5.14 Win Rates",
+        var win514 = {labels: ["5.14 Win Rates"],
             datasets: [
                 {
                     label: "Brazil",
