@@ -1,54 +1,54 @@
 window.onload = function(){
     /*Initializing Variables*/
-    var brPickRates511 = 0;
-    var brPickRates514 = 0;
-    var brWinRates511 = 0;
-    var brWinRates514 = 0;
+    var brPickRates511 = [];
+    var brPickRates514 = [];
+    var brWinRates511 = [];
+    var brWinRates514 = [];
 
-    var naPickRates511 = 0;
-    var naPickRates514 = 0;
-    var naWinRates511 = 0;
-    var naWinRates514 = 0;
+    var naPickRates511 = [];
+    var naPickRates514 = [];
+    var naWinRates511 = [];
+    var naWinRates514 = [];
 
-    var krPickRates511 = 0;
-    var krPickRates514 = 0;
-    var krWinRates511 = 0;
-    var krWinRates514 = 0;
+    var krPickRates511 = [];
+    var krPickRates514 = [];
+    var krWinRates511 = [];
+    var krWinRates514 = [];
 
-    var ocePickRates511 = 0;
-    var ocePickRates514 = 0;
-    var oceWinRates511 = 0;
-    var oceWinRates514 = 0;
+    var ocePickRates511 = [];
+    var ocePickRates514 = [];
+    var oceWinRates511 = [];
+    var oceWinRates514 = [];
 
-    var eunePickRates511 = 0;
-    var eunePickRates514 = 0;
-    var euneWinRates511 = 0;
-    var euneWinRates514 = 0;
+    var eunePickRates511 = [];
+    var eunePickRates514 = [];
+    var euneWinRates511 = [];
+    var euneWinRates514 = [];
 
-    var lanPickRates511 = 0;
-    var lanPickRates514 = 0;
-    var lanWinRates511 = 0;
-    var lanWinRates514 = 0;
+    var lanPickRates511 = [];
+    var lanPickRates514 = [];
+    var lanWinRates511 = [];
+    var lanWinRates514 = [];
 
-    var trPickRates511 = 0;
-    var trPickRates514 = 0;
-    var trWinRates511 = 0;
-    var trWinRates514 = 0;
+    var trPickRates511 = [];
+    var trPickRates514 = [];
+    var trWinRates511 = [];
+    var trWinRates514 = [];
 
-    var euwPickRates511 = 0;
-    var euwPickRates514 = 0;
-    var euwWinRates511 = 0;
-    var euwWinRates514 = 0;
+    var euwPickRates511 = [];
+    var euwPickRates514 = [];
+    var euwWinRates511 = [];
+    var euwWinRates514 = [];
 
-    var ruPickRates511 = 0;
-    var ruPickRates514 = 0;
-    var ruWinRates511 = 0;
-    var ruWinRates514 = 0;
+    var ruPickRates511 = [];
+    var ruPickRates514 = [];
+    var ruWinRates511 = [];
+    var ruWinRates514 = [];
 
-    var lasPickRates511 = 0;
-    var lasPickRates514 = 0;
-    var lasWinRates511 = 0;
-    var lasWinRates514 = 0;
+    var lasPickRates511 = [];
+    var lasPickRates514 = [];
+    var lasWinRates511 = [];
+    var lasWinRates514 = [];
 
     var regions = ["Brazil", "North America", "Korea", "Oceania", "EU Nordic & East", "Latin America North", "Turkey", "EU West", "Russia", "Latin America South"];
     var options = {scaleFontColor: "#fff", scaleLineColor : "#fff", scaleShowHorizontalLines: false, 
@@ -94,58 +94,58 @@ window.onload = function(){
 
         if(isNaN(selItem)){
         } else {
-            brPickRates511 = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            brPickRates514 = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            brWinRates511 = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            brWinRates514 = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            brPickRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            brPickRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            brWinRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            brWinRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            naPickRates511 = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            naPickRates514 = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            naWinRates511 = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            naWinRates514 = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            naPickRates511[0] = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            naPickRates514[0] = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            naWinRates511[0] = ((data.patches[1].queues[selQueue].regions[1].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            naWinRates514[0] = ((data.patches[0].queues[selQueue].regions[1].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            krPickRates511 = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            krPickRates514 = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            krWinRates511 = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            krWinRates514 = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            krPickRates511[0] = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            krPickRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            krWinRates511[0] = ((data.patches[1].queues[selQueue].regions[2].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            krWinRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            ocePickRates511 = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            ocePickRates514 = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            oceWinRates511 = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            oceWinRates514 = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            ocePickRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            ocePickRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            oceWinRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            oceWinRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            eunePickRates511 = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            eunePickRates514 = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            euneWinRates511 = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            euneWinRates514 = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            eunePickRates511[0] = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            eunePickRates514[0] = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            euneWinRates511[0] = ((data.patches[1].queues[selQueue].regions[4].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euneWinRates514[0] = ((data.patches[0].queues[selQueue].regions[4].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            lanPickRates511 = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lanPickRates514 = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            lanWinRates511 = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lanWinRates514 = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            lanPickRates511[0] = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lanPickRates514[0] = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            lanWinRates511[0] = ((data.patches[1].queues[selQueue].regions[5].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lanWinRates514[0] = ((data.patches[0].queues[selQueue].regions[5].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            trPickRates511 = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            trPickRates514 = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            trWinRates511 = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            trWinRates514 = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            trPickRates511[0] = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            trPickRates514[0] = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            trWinRates511[0] = ((data.patches[1].queues[selQueue].regions[6].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            trWinRates514[0] = ((data.patches[0].queues[selQueue].regions[6].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            euwPickRates511 = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            euwPickRates514 = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            euwWinRates511 = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            euwWinRates514 = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            euwPickRates511[0] = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euwPickRates514[0] = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            euwWinRates511[0] = ((data.patches[1].queues[selQueue].regions[7].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            euwWinRates514[0] = ((data.patches[0].queues[selQueue].regions[7].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            ruPickRates511 = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            ruPickRates514 = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            ruWinRates511 = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            ruWinRates514 = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            ruPickRates511[0] = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            ruPickRates514[0] = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            ruWinRates511[0] = ((data.patches[1].queues[selQueue].regions[8].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            ruWinRates514[0] = ((data.patches[0].queues[selQueue].regions[8].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
-            lasPickRates511 = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lasPickRates514 = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
-            lasWinRates511 = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            lasWinRates514 = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            lasPickRates511[0] = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lasPickRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            lasWinRates511[0] = ((data.patches[1].queues[selQueue].regions[9].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
+            lasWinRates514[0] = ((data.patches[0].queues[selQueue].regions[9].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
         }
         
-        var pick511 = {labels: "",
+        var pick511 = {labels: "5.11 Pick Rates",
             datasets: [
                 {
                     label: "Brazil",
@@ -230,7 +230,7 @@ window.onload = function(){
             ]
         };
 
-        var pick514 = {labels: "",
+        var pick514 = {labels: "5.14 Pick Rates",
             datasets: [
                 {
                     label: "Brazil",
@@ -315,7 +315,7 @@ window.onload = function(){
             ]
         };
 
-        var win511 = {labels: "",
+        var win511 = {labels: "5.11 Win Rates",
             datasets: [
                 {
                     label: "Brazil",
@@ -400,7 +400,7 @@ window.onload = function(){
             ]
         };
 
-        var win514 = {labels: "",
+        var win514 = {labels: "5.14 Win Rates",
             datasets: [
                 {
                     label: "Brazil",
