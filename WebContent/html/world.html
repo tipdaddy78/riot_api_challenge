@@ -18,6 +18,7 @@
   <script type="text/javascript" src="../js/foundation/responsive-tables.js"></script>
   <script src="../js/foundation/modernizr.js"></script>
   <script src="../js/sorttable.js"></script>
+  <script src="../js/world.js"></script>
 </head>
 <body class="body">
 	<div class="fixed">
@@ -31,7 +32,7 @@
 			<section class="top-bar-section">
 				<ul class="right">
 					<li class="divider"></li>
-					<li><a href="world.html">World View</a></li>
+					<li class="active"><a href="#">World View</a></li>
 					<li class="divider"></li>
 					<li class="has-dropdown">
 						<a href="#">Region Select</a>
@@ -53,8 +54,7 @@
 		</nav>
 	</div>
 	<div class="container">
-		<h4 style="color: #fff; font-family: Verdana, sans-serif">A World of AP seeks to demonstrate the change in AP Item usage due to the large item rework by showing pick rates of those items across 10,000 games and win rates for whenever they are picked both before and after the changes. Additionally, you can see how the changes to an item affected a certain Lane, and Champion.  This data can be viewed on a per region basis.  Additionally, global comparisons may be made on the "World View" page.</h4>
-		<h5 style="color:#fff">To get started: Click a region on the map below (or in the menu) to see what effect the item changes had on their usage of those items.</h5>
+		<h1>World View</h1>
 		<img src="../images/riot_servers.png" id="serverMap" width="1024" class="map" usemap="#map" alt="servers">
 		<p class="info-text">Faction Icons created by <a href="http://teslaeffect.deviantart.com/">TeslaEffect</a> and <a href="http://theladyclockwork.deviantart.com/">TheLadyClockWork</a></p>
 	</div>
@@ -70,8 +70,88 @@
 		<area shape="rect" id="ru" alt="RU" title="Russia" coords="587,58,645,137" href="RU.html" />
 		<area shape="rect" id="tr" alt="TR" title="Turkey" coords="494,150,552,234" href="TR.html" />
 	</map>
+
+	<form action="world.html" method="get">
+	<div class="container">
+		<h2>World Statistics: Please select your filters to see the stats for them.</h2>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="item">Item</label>
+				<select name="item" id="item" required>
+				  <option value="13">Amplifying Tome</option>
+				  <option value="15">Archangel&#39;s Staff</option>
+				  <option value="1">Athene&#39;s Unholy Grail</option>
+				  <option value="2">Blasting Wand</option>
+				  <option value="3">Jungle Items</option>
+				  <option value="6">Liandry&#39;s Torment</option>
+				  <option value="5">Luden&#39;s Echo</option>
+				  <option value="9">Morellonomicon</option>
+				  <option value="11">Nashor&#39;s Tooth</option>
+				  <option value="0">Needlessly Large Rod</option>
+				  <option value="4">Rabadon&#39;s Deathcap</option>
+				  <option value="14">Rod of Ages</option>
+				  <option value="12">Rylai&#39;s Crystal Scepter</option>
+				  <option value="8">Seraph&#39;s Embrace</option>
+				  <option value="10">Void Staff</option>
+				  <option value="7">Will of the Ancients</option>
+				  <option value="16">Zhonya&#39;s Hourglass</option> 
+				</select>
+			</div>
+			<div class="small-3 columns">
+				<label for="queue">Queue</label>
+				<select name="queue" id="queue" required>
+	 				<option value="1">Normal</option>
+					<option value="0">Ranked</option>
+				</select>
+			</div>
+			<div class="small-3 columns">
+				<label for="lane">Lane</label>
+				<select name="lane" id="lane">
+					<option value="4">None</option>
+	 				<option value="3">Bottom</option>
+					<option value="1">Jungle</option>
+					<option value="2">Middle</option>
+					<option value="0">Top</option>
+				</select>
+			</div>
+			<div class="small-3 columns">
+				<input type="submit" value="Search" class="small radius button" style="font-weight: bold; color:black; background-color: #fff; width: 100%">
+			</div>
+		</div>
+	</div>
+	</form>
+
+
+	<div class="container">
+	  <div>
+	    <div class="small-6 columns" id="canvasDiv">
+	      <h2 style="color: #B6E753">AP Item Pick Rates: Ranked</h2>
+	      <canvas id="canvas" height="450" width="600"></canvas>
+	    </div>
+	    <div class="small-6 columns" id="canvasDiv2">
+	      <h2 style="color: #B6E753">AP Item Win Rates: Ranked</h2>
+	      <canvas id="canvas2" height="450" width="600"></canvas>
+	    </div>
+	  </div>
+	  <div id="js-legend" class="chart-legend"></div>
+	</div>
+	<br>
+
+	<div class="container">
+	  <div>
+	    <div class="small-6 columns" id="canvasDiv3">
+	      <h2 style="color: #B6E753">AP Item Pick Rates: Normal</h2>
+	      <canvas id="canvas3" height="450" width="600"></canvas>
+	    </div>
+	    <div class="small-6 columns" id="canvasDiv4">
+	      <h2 style="color: #B6E753">AP Item Win Rates: Normal</h2>
+	      <canvas id="canvas4" height="450" width="600"></canvas>
+	    </div>
+	  </div>
+	  <div id="js-legend2" class="chart-legend"></div>
+	</div>
 	
-	<footer>
+<footer>
 	<div class="row">
 		<div class="small-12 columns">
 			<p class="info-text">A World of AP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
