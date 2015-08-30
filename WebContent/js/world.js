@@ -101,9 +101,9 @@ window.onload = function(){
         if(isNaN(selItem)){
         } else {
             var filters = document.getElementById("filters");
-            filters.innerHTML = "Selected Filters: " + items[selItem] + ", " + queues[selQueue] +", and " + lanes[selLane]; 
+            filters.innerHTML = "Selected Filters: " + items[selItem] + "in " + queues[selQueue] +", and " + lanes[selLane]; 
             var filters2 = document.getElementById("filters2");
-            filters2.innerHTML = "Selected Filters: " + items[selItem] + ", " + queues[selQueue] +", and " + lanes[selLane]; 
+            filters2.innerHTML = "Selected Filters: " + items[selItem] + "in " + queues[selQueue] +", and " + lanes[selLane]; 
             brPickRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             brPickRates514[0] = ((data.patches[0].queues[selQueue].regions[0].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             brWinRates511[0] = ((data.patches[1].queues[selQueue].regions[0].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
