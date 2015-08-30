@@ -110,7 +110,7 @@ window.onload = function(){
             krWinRates514[0] = ((data.patches[0].queues[selQueue].regions[2].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 
             ocePickRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
-            ocePickRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
+            ocePickRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].pick_rate)*100).toFixed(3);
             oceWinRates511[0] = ((data.patches[1].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
             oceWinRates514[0] = ((data.patches[0].queues[selQueue].regions[3].items[selItem].stats[selLane].win_rate)*100).toFixed(3);
 

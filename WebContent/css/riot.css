@@ -66,6 +66,7 @@
 .chart-legend ul {
   color: white;
   list-style-type: none;
+  text-align: left;
 }
 
 .info-text {
