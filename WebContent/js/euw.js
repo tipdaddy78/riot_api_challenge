@@ -64,11 +64,10 @@ window.onload = function(){
         var selItem = parseInt(QueryString.item);
         var selLane = QueryString.lane;
 
-        var fullTable = document.getElementById("filters");
-        fullTable.innerHTML = "Selected Filters: " + items[selItem] + ", " + selLane + ", and " + selChampion; 
-
         if(selLane == "" && selChampion != "") { // Lane not specified, Champion IS specified
             var skinBox = document.getElementById("skins");
+            var filters = document.getElementById("filters");
+            filters.innerHTML = "Selected Filters: " + items[selItem] + " on " + selChampion; 
 
             var index = 5;
             for(i = 0; i < 126; i++) {
@@ -152,6 +151,8 @@ window.onload = function(){
                 }
             }
         } else if (selLane != "" && selChampion == "") { // Lane IS specified, Champion not specified
+            var filters = document.getElementById("filters");
+            filters.innerHTML = "Selected Filters: " + items[selItem] + " in " + selLane; 
             switch(selLane){
                 case "Bottom":
                     var index = 8;
@@ -242,6 +243,8 @@ window.onload = function(){
             if (isNaN(selItem)){ // On initial load it will go into this block so stop it from trying to generate a graph.
                 
             } else {
+                var filters = document.getElementById("filters");
+                filters.innerHTML = "Selected Filters: " + items[selItem] + " on " + selChampion + " in " + selLane; 
                 var index = 5;
                 for(i = 0; i < 126; i++) {
                     if (selChampion == data.patches[0].queues[0].regions[7].items[selItem].stats[index].champion){
@@ -338,6 +341,8 @@ window.onload = function(){
                 }
             }
         } else {// Neither lane, nor champion specified
+            var filters = document.getElementById("filters");
+            filters.innerHTML = "Selected Filters: " + items[selItem]; 
             var index = 9;
             for(i = 0; i < 126; i++) {
                 champName = data.patches[0].queues[0].regions[7].items[selItem].stats[index].champion;
