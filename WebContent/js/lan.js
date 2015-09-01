@@ -374,9 +374,6 @@ window.onload = function(){
             }
         }
 
-        var newTable = document.getElementById("table");
-        sorttable.makeSortable(newTable);
-
         /* Set up pick/win rate graphs */
         var rankedPick = {labels: items,
             datasets: [
