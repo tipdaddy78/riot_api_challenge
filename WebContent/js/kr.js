@@ -77,14 +77,14 @@ window.onload = function(){
                     for(j = index; j < (index+4); j++){
                         champName = data.patches[0].queues[0].regions[2].items[selItem].stats[j].champion;
                         champLane = data.patches[0].queues[0].regions[2].items[selItem].stats[j].lane; 
-                        rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(3);
-                        rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(3);
-                        rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(3);
-                        rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(3);
-                        normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(3);
-                        normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(3);
-                        normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(3);
-                        normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(3);
+                        rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[j].pick_rate)*100).toFixed(2);
+                        normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
+                        normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[j].win_rate)*100).toFixed(2);
 
                         var newRow   = table.insertRow(table.rows.length);
 
@@ -104,27 +104,27 @@ window.onload = function(){
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(3);
-                        tableData = document.createTextNode(rankedChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(4);
-                        tableData = document.createTextNode(normalChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(5);
-                        tableData = document.createTextNode(normalChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(6);
                         tableData = document.createTextNode(rankedChampWin511);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(7);
+                        newCell = newRow.insertCell(4);
+                        tableData = document.createTextNode(rankedChampPick514);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(5);
                         tableData = document.createTextNode(rankedChampWin514);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(8);
+                        newCell = newRow.insertCell(6);
+                        tableData = document.createTextNode(normalChampPick511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(7);
                         tableData = document.createTextNode(normalChampWin511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(8);
+                        tableData = document.createTextNode(normalChampPick514);
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(9);
@@ -159,14 +159,14 @@ window.onload = function(){
             for(i = 0; i < 126; i++) {
                 champName = data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion;
                 champLane = data.patches[0].queues[0].regions[2].items[selItem].stats[index].lane; 
-                rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
+                rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                 var newRow   = table.insertRow(table.rows.length);
 
@@ -177,7 +177,7 @@ window.onload = function(){
                 tableData.src = 'http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/' + champName + '.png';
                 newCell.appendChild(tableData);
 
-                newCell = newRow.insertCell(1);
+               newCell = newRow.insertCell(1);
                         tableData = document.createTextNode(champLane);
                         newCell.appendChild(tableData);
 
@@ -186,27 +186,27 @@ window.onload = function(){
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(3);
-                        tableData = document.createTextNode(rankedChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(4);
-                        tableData = document.createTextNode(normalChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(5);
-                        tableData = document.createTextNode(normalChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(6);
                         tableData = document.createTextNode(rankedChampWin511);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(7);
+                        newCell = newRow.insertCell(4);
+                        tableData = document.createTextNode(rankedChampPick514);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(5);
                         tableData = document.createTextNode(rankedChampWin514);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(8);
+                        newCell = newRow.insertCell(6);
+                        tableData = document.createTextNode(normalChampPick511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(7);
                         tableData = document.createTextNode(normalChampWin511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(8);
+                        tableData = document.createTextNode(normalChampPick514);
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(9);
@@ -240,14 +240,14 @@ window.onload = function(){
                         }
                         champName = data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion;
                         champLane = data.patches[0].queues[0].regions[2].items[selItem].stats[index].lane; 
-                        rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                        rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                        rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                        rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                        normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                        normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                        normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                        normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
+                        rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                        normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                        normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                         var newRow   = table.insertRow(table.rows.length);
 
@@ -267,27 +267,27 @@ window.onload = function(){
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(3);
-                        tableData = document.createTextNode(rankedChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(4);
-                        tableData = document.createTextNode(normalChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(5);
-                        tableData = document.createTextNode(normalChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(6);
                         tableData = document.createTextNode(rankedChampWin511);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(7);
+                        newCell = newRow.insertCell(4);
+                        tableData = document.createTextNode(rankedChampPick514);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(5);
                         tableData = document.createTextNode(rankedChampWin514);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(8);
+                        newCell = newRow.insertCell(6);
+                        tableData = document.createTextNode(normalChampPick511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(7);
                         tableData = document.createTextNode(normalChampWin511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(8);
+                        tableData = document.createTextNode(normalChampPick514);
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(9);
@@ -311,14 +311,14 @@ window.onload = function(){
             for(i = 0; i < 126; i++) {
                 champName = data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion;
                 champLane = data.patches[0].queues[0].regions[2].items[selItem].stats[index].lane; 
-                rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(3);
-                normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
-                normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(3);
+                rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
+                normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
+                normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
 
                 var newRow   = table.insertRow(table.rows.length);
 
@@ -338,27 +338,27 @@ window.onload = function(){
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(3);
-                        tableData = document.createTextNode(rankedChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(4);
-                        tableData = document.createTextNode(normalChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(5);
-                        tableData = document.createTextNode(normalChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(6);
                         tableData = document.createTextNode(rankedChampWin511);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(7);
+                        newCell = newRow.insertCell(4);
+                        tableData = document.createTextNode(rankedChampPick514);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(5);
                         tableData = document.createTextNode(rankedChampWin514);
                         newCell.appendChild(tableData);
 
-                        newCell = newRow.insertCell(8);
+                        newCell = newRow.insertCell(6);
+                        tableData = document.createTextNode(normalChampPick511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(7);
                         tableData = document.createTextNode(normalChampWin511);
+                        newCell.appendChild(tableData);
+
+                        newCell = newRow.insertCell(8);
+                        tableData = document.createTextNode(normalChampPick514);
                         newCell.appendChild(tableData);
 
                         newCell = newRow.insertCell(9);
@@ -368,9 +368,6 @@ window.onload = function(){
                 index += 5;
             }
         }
-
-        var newTable = document.getElementById("table");
-        sorttable.makeSortable(newTable);
 
         var rankedPick = {labels: items,
             datasets: [
