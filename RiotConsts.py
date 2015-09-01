@@ -8,11 +8,13 @@ URL = {
 API_VERSIONS = {
     'match': '2.2'
 }
-
+# queue to "queue code" dictionary
 QUEUES = dict(normal='NORMAL_5X5', ranked='RANKED_SOLO')
 
+# patch dictionary
 PATCHES = dict(first= '5.11', second='5.14')
 
+# Region name to abbreviation dictionary
 REGIONS = {
     'Brazil': 'br',
     'EU Nordic & East': 'eune',
@@ -26,6 +28,7 @@ REGIONS = {
     'Turkey': 'tr'
 }
 
+# Item name to item code dictionary
 ITEMS = {
     'Amplifying Tome': 1052,
     'Archangels Staff': 3003,
@@ -49,8 +52,10 @@ ITEMS = {
     'Zhonyas Hourglass': 3157
 }
 
+# array for lanes
 LANES = [u'TOP', u'JUNGLE', u'MIDDLE', u'BOTTOM', u'']
 
+# Champion to champion code dictionary.
 CHAMPIONS = {
     '': 0,
     'Aatrox': 266,

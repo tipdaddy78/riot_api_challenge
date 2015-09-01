@@ -3,20 +3,30 @@ import json
 import RiotConsts as Consts
 
 
+# This method is used to do all of the data collection of the games. 
+# It collects all the data for the region, patch and queue you provide.
+
 def main(region, patch, queue):
+    # get match-ids
     filepath = '../AP_ITEM_DATASET/' + patch + '/' + queue + '/' + Consts.REGIONS[region]
     with open(filepath + '.json') as data:
         matches = json.load(data)
     api = RiotAPI(Consts.api_key, Consts.REGIONS[region])
+    # set up file to be written to.
     with open(filepath + "_results.json", 'a') as f:
         f.write('{\n"matches" :[{\n\t')
+
+    # Loop through all the matches in the region/patch/queue of interest.
     for match in matches:
+        # Make sure the server responds with 200.  Otherwise go to the next match.
         response = api.get_match_by_matchID(match)
         if response != "Bad JSON":
             participants = response["participants"]
             with open(filepath + "_results.json", 'a') as f:
                 f.write('"matchId" : "' + str(match) + '", \n\t'
                         + '"participants" : [\n\t\t')
+
+            # Gather data for each player in the match.
             for x in range(0, 10):
                 data = {"item0": participants[x]["stats"]["item0"],
                         "item1": participants[x]["stats"]["item1"],
@@ -29,6 +39,7 @@ def main(region, patch, queue):
                         "winner": participants[x]["stats"]["winner"],
                         "lane": participants[x]["timeline"]["lane"],
                         "role": participants[x]['timeline']['role']}
+                # Make sure a trailing ',' isn't entered.
                 if x != 9:
                     with open(filepath + "_results.json", 'a') as f:
                         json.dump(data, f)
@@ -37,6 +48,7 @@ def main(region, patch, queue):
                     with open(filepath + "_results.json", 'a') as f:
                         json.dump(data, f)
 
+        # Close off open arrays and dictionaries.
         with open(filepath + "_results.json", 'a') as f:
             f.write("]},{")
     with open(filepath + "_results.json", 'a') as f:

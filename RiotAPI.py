@@ -2,6 +2,8 @@ import requests
 import RiotConsts as Consts
 
 
+# This file handles our connection to the riot API.
+
 class RiotAPI(object):
 
     def __init__(self, api_key, region=Consts.REGIONS['Turkey']):

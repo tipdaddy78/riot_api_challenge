@@ -12,16 +12,20 @@ def main(patches=Consts.PATCHES, regions=Consts.REGIONS, queues=Consts.QUEUES, i
     results_file = '../item_data/item_analysis.json'
     with open(results_file, 'a+') as f:
         f.write('{"patches": [\n\t')
+
+    # Loop through both patches
     for patch, patch_code in patches.iteritems():
         with open(results_file, 'a+') as f:
             f.write('{"patch": "' + patch_code + '",\n\t')
             f.write('"queues": [\n\t\t')
 
+        # Loop through both queues
         for queue, queue_code in queues.iteritems():
             with open(results_file, 'a+') as f:
                 f.write('{"queue": "' + queue_code + '",\n\t\t')
                 f.write('"regions": [\n\t\t\t')
 
+            # Loop through each region.
             for region, region_code in regions.iteritems():
                 file_path = '../AP_ITEM_DATASET/' + patch_code + '/' + queue_code + '/'
                 with open(file_path  + region_code + '_results.json') as f:
@@ -31,6 +35,7 @@ def main(patches=Consts.PATCHES, regions=Consts.REGIONS, queues=Consts.QUEUES, i
                     f.write('{"region": "' + region + '",\n\t\t\t')
                     f.write('"items": [\n\t\t\t\t')
 
+                # Loop through each item
                 for item, item_code in items.iteritems():
                     with open(results_file, 'a+') as f:
                         f.write('{"item": "' + item + '",\n\t\t\t\t')
@@ -203,13 +208,18 @@ def main(patches=Consts.PATCHES, regions=Consts.REGIONS, queues=Consts.QUEUES, i
                                             if participant['winner'] == True:
                                                 win_count += 1
                                                 continue
+
+                            #No divide by 0 float error
                             if pick_count == 0.0:
                                 pick_rate = 0.0
                                 win_rate = 0.0
+
+                            # Math for pick and win rate
                             else:
                                 pick_rate = pick_count / total_players
                                 win_rate = win_count / pick_count
 
+                            # Creation of dictionary that will get inserted into the json file.
                             item_dictionary = {
                                 'champion': champion,
                                 'lane': lane,
@@ -218,6 +228,7 @@ def main(patches=Consts.PATCHES, regions=Consts.REGIONS, queues=Consts.QUEUES, i
                                 'pick_rate': pick_rate,
                                 'win_rate': win_rate
                             }
+                            # Writing to json file.
                             with open(results_file, 'a+') as f:
                                 json.dump(item_dictionary, f)
                                 f.write(',\n\t\t\t\t\t')
