@@ -77,8 +77,8 @@
   margin-right: auto;
   margin-left: auto;
 }
-.itemTable tbody tr td {
-  text-align: right;
+.itemTable {
+  text-align: center;
 }
 /* Sortable tables */
 .itemTable thead {
