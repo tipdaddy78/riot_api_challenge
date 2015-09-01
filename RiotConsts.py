@@ -26,8 +26,6 @@ REGIONS = {
     'Turkey': 'tr'
 }
 
-api_key = '6e9e8cb9-8f9a-46ca-a698-028c3bc5ea85'
-
 ITEMS = {
     'Amplifying Tome': 1052,
     'Archangels Staff': 3003,
