@@ -61,6 +61,7 @@ window.onload = function(){
           } 
             return query_string;
         }();
+        /* get the actual html arguments */
         var selChampion = QueryString.champion;
         var selItem = parseInt(QueryString.item);
         var selLane = QueryString.lane;
@@ -71,6 +72,7 @@ window.onload = function(){
             var filters = document.getElementById("filters");
             filters.innerHTML = "Selected Filters: " + items[selItem] + " on " + selChampion; 
 
+            /* in json, the first 5 entries are "global" so starting at 5 allows us to get to the champion specific stats */
             var index = 5;
             for(i = 0; i < 126; i++) {
                 if (selChampion == data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion){
@@ -131,6 +133,7 @@ window.onload = function(){
                         tableData = document.createTextNode(normalChampWin514);
                         newCell.appendChild(tableData);
                     }
+                /* Add the skin image for champ specific */
                 var skin1 = document.createElement('img');
                 skin1.src = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champName + '_0.jpg';
                 skinBox.appendChild(skin1);
@@ -138,82 +141,6 @@ window.onload = function(){
                 } else {
                     index += 5;
                 }
-            }
-        } else if (selLane != "" && selChampion == "") { // Lane IS specified, Champion not specified
-            var filters = document.getElementById("filters");
-            filters.innerHTML = "Selected Filters: " + items[selItem] + " in " + selLane; 
-
-            switch(selLane){
-                case "Bottom":
-                    var index = 8;
-                    break;
-                case "Jungle":
-                    var index = 6;
-                    break;
-                case "Middle":
-                    var index = 7;
-                    break;
-                default: 
-                    var index = 5;
-            }
-            for(i = 0; i < 126; i++) {
-                champName = data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion;
-                champLane = data.patches[0].queues[0].regions[2].items[selItem].stats[index].lane; 
-                rankedChampPick511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampPick514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                rankedChampWin511 = ((data.patches[1].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                rankedChampWin514 = ((data.patches[0].queues[0].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampPick511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampPick514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].pick_rate)*100).toFixed(2);
-                normalChampWin511 = ((data.patches[1].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
-                normalChampWin514 = ((data.patches[0].queues[1].regions[2].items[selItem].stats[index].win_rate)*100).toFixed(2);
-
-                var newRow   = table.insertRow(table.rows.length);
-
-                // Insert a cell in the row at index 0
-                var newCell  = newRow.insertCell(0);
-                // Append a text node to the cell
-                var tableData  = document.createElement('img');
-                tableData.src = 'http://ddragon.leagueoflegends.com/cdn/5.16.1/img/champion/' + champName + '.png';
-                newCell.appendChild(tableData);
-
-               newCell = newRow.insertCell(1);
-                        tableData = document.createTextNode(champLane);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(2);
-                        tableData = document.createTextNode(rankedChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(3);
-                        tableData = document.createTextNode(rankedChampWin511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(4);
-                        tableData = document.createTextNode(rankedChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(5);
-                        tableData = document.createTextNode(rankedChampWin514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(6);
-                        tableData = document.createTextNode(normalChampPick511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(7);
-                        tableData = document.createTextNode(normalChampWin511);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(8);
-                        tableData = document.createTextNode(normalChampPick514);
-                        newCell.appendChild(tableData);
-
-                        newCell = newRow.insertCell(9);
-                        tableData = document.createTextNode(normalChampWin514);
-                        newCell.appendChild(tableData);
-
-                index += 5;
             }
         } else if (selLane != "" && selChampion != "") { // Both Lane and Champion Specified
             var skinBox = document.getElementById("skins");
@@ -225,7 +152,7 @@ window.onload = function(){
                 var index = 5;
                 for(i = 0; i < 126; i++) {
                     if (selChampion == data.patches[0].queues[0].regions[2].items[selItem].stats[index].champion){
-                        switch(selLane){
+                        switch(selLane){ // order is: Top, Jungle, Middle, Bottom, general
                             case "Bottom":
                                 index += 3;
                                 break;
@@ -369,6 +296,7 @@ window.onload = function(){
             }
         }
 
+        /* Variables for graphs */
         var rankedPick = {labels: items,
             datasets: [
                 {
@@ -453,6 +381,7 @@ window.onload = function(){
             ]
         };
 
+        /* creation of graphs */
         var ctx = document.getElementById("canvas").getContext("2d");
             window.myBar = new Chart(ctx).Bar(rankedPick, options);
             console.log("tried to make graph1");
